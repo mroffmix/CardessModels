@@ -18,7 +18,12 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Install Swaggen
-      run: brew install swaggen
+      run: |
+        git clone https://github.com/yonaskolb/SwagGen.git
+        cd SwagGen
+        swift build -c release
+        cp .build/release/swaggen /usr/local/bin/swaggen
+        
      # Step for generating development package
     - name: Generate Dev Package
       run: swift generate.swift
