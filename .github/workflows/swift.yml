@@ -16,10 +16,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    
+
+    - name: Install Swaggen
+      run: brew install swaggen
      # Step for generating development package
     - name: Generate Dev Package
-      run: swift generate_dev.swift
+      run: swift generate.swift
       
     - name: Build
       run: swift build -v
