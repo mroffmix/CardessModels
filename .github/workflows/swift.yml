@@ -1,0 +1,35 @@
+# This workflow will build a Swift project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
+
+name: Swift
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install Swaggen
+      run: |
+        git clone https://github.com/yonaskolb/SwagGen.git
+        cd SwagGen
+        swift build -c release
+        cp .build/release/swaggen /usr/local/bin/swaggen
+        
+     # Step for generating development package
+    - name: Generate Dev Package
+      run: swift generate.swift
+      
+    - name: Build
+      run: swift build -v
+      
+    - name: Run tests
+      run: swift test -v
