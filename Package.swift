@@ -17,6 +17,7 @@ let package = Package(
             dependencies: [],
             path: "Sources/CardessModels",
 //            exclude: ["generate.swift"],
+            exclude: ["README.md"],
             sources: ["."],
             publicHeadersPath: "."
         ),
