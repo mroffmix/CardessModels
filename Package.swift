@@ -17,7 +17,7 @@ let package = Package(
         .target(
             name: "CardessModels",
             dependencies: [],
-            path: "Sources/CARDESS",
+            path: "Sources/CardessModels",
             exclude: ["generate.swift"],
             sources: ["."],
             publicHeadersPath: "."

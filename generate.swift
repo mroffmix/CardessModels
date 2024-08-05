@@ -17,7 +17,7 @@ func runCommand(_ command: String, arguments: [String]) throws {
 
 do {
   // Define relative paths
-  let templatePath = "swaggen/Template.yaml"
+  let templatePath = "swagger_config/Template.yaml"
   let destinationPath = "Sources/CardessModels/"
   let modelsPath = "Sources/CardessModels/Models/"
   let swaggerURL = "https://acceptance.sell.cardess.com/swagger/DealerAPI/swagger.json"
