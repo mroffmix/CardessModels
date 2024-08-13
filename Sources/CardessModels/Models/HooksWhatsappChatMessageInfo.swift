@@ -14,13 +14,15 @@ public class HooksWhatsappChatMessageInfo: Codable, Equatable {
   public var fullName: String?
   public var locationId: Int?
   public var messageText: String?
+  public var source: EnumsMessageSource?
   public var to: String?
 
-  public init(from: String?  = nil, fullName: String?  = nil, locationId: Int?  = nil, messageText: String?  = nil, to: String?  = nil) {
+  public init(from: String?  = nil, fullName: String?  = nil, locationId: Int?  = nil, messageText: String?  = nil, source: EnumsMessageSource?  = nil, to: String?  = nil) {
     self.from = from
     self.fullName = fullName
     self.locationId = locationId
     self.messageText = messageText
+    self.source = source
     self.to = to
   }
 
@@ -31,6 +33,7 @@ public class HooksWhatsappChatMessageInfo: Codable, Equatable {
     guard self.fullName == object.fullName else { return false }
     guard self.locationId == object.locationId else { return false }
     guard self.messageText == object.messageText else { return false }
+    guard self.source == object.source else { return false }
     guard self.to == object.to else { return false }
     return true
   }

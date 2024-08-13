@@ -10,4 +10,5 @@ import Foundation
 public enum EnumsMessageSource: Int, Codable, Equatable, CaseIterable {
     case unknown = 0
     case whatsapp = 1
+    case facebook = 2
 }

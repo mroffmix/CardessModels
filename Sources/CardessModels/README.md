@@ -272,6 +272,7 @@ To add support for a specific asynchronous library, just add an extension on `AP
 - **EnumsLeadVehicleDocumentType**
 - **EnumsMessageSource**
 - **EnumsMessageType**
+- **EnumsNotificationType**
 - **EnumsPersonAvailability**
 - **EnumsPersonAvailabilityTime**
 - **EnumsPersonEmploymentType**
@@ -376,6 +377,7 @@ To add support for a specific asynchronous library, just add an extension on `AP
 - **ModelTestDriveLog**
 - **ModelUser**
 - **ModelUserRole**
+- **NotificationInfo**
 - **OfferRequestInfo**
 - **PagedResultlessThanAccessoryInfogreaterThan**
 - **PagedResultlessThanActivityInfogreaterThan**
@@ -756,6 +758,10 @@ To add support for a specific asynchronous library, just add an extension on `AP
 	- **GetApiMatrixRuleById**: GET `/api/matrixrule/{id}`
 	- **PatchApiMatrixRuleDeactivateById**: PATCH `/api/matrixrule/deactivate/{id}`
 	- **PostApiMatrixRule**: POST `/api/matrixrule`
+- **API.Notification**
+	- **GetApiNotificationForuserByUserId**: GET `/api/notification/foruser/{userid}`
+	- **PutApiNotificationMarkasreadById**: PUT `/api/notification/markasread/{id}`
+	- **PutApiNotificationMarkasunreadById**: PUT `/api/notification/markasunread/{id}`
 - **API.Operation**
 	- **PutApiOperationByActivityId**: PUT `/api/operation/{activityid}`
 - **API.PriceMatrix**
