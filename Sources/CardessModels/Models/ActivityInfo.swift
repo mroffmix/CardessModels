@@ -23,6 +23,8 @@ public class ActivityInfo: Codable, Equatable {
   public var leadId: String?
   public var locationid: String?
   public var modifiedOn: Date?
+  public var personalizedMessage: String?
+  public var place: String?
   public var startDate: Date?
   public var state: EnumsActivityStatus?
   public var testDriveLog: TestDriveLogInfo?
@@ -30,7 +32,7 @@ public class ActivityInfo: Codable, Equatable {
   public var type: EnumsActivityType?
   public var vehicleId: String?
 
-  public init(assignedToId: String? = nil, box: DeliveryBoxInfo?  = nil, boxId: String? = nil, callAttemptsCount: Int?  = nil, comment: String?  = nil, createdOn: Date? = nil, endDate: Date? = nil, externalId: String?  = nil, id: String? = nil, lead: LeadInfo?  = nil, leadId: String? = nil, locationid: String?  = nil, modifiedOn: Date? = nil, startDate: Date? = nil, state: EnumsActivityStatus?  = nil, testDriveLog: TestDriveLogInfo?  = nil, testDriveLogId: String? = nil, type: EnumsActivityType?  = nil, vehicleId: String? = nil) {
+  public init(assignedToId: String? = nil, box: DeliveryBoxInfo?  = nil, boxId: String? = nil, callAttemptsCount: Int?  = nil, comment: String?  = nil, createdOn: Date? = nil, endDate: Date? = nil, externalId: String?  = nil, id: String? = nil, lead: LeadInfo?  = nil, leadId: String? = nil, locationid: String?  = nil, modifiedOn: Date? = nil, personalizedMessage: String?  = nil, place: String?  = nil, startDate: Date? = nil, state: EnumsActivityStatus?  = nil, testDriveLog: TestDriveLogInfo?  = nil, testDriveLogId: String? = nil, type: EnumsActivityType?  = nil, vehicleId: String? = nil) {
     self.assignedToId = assignedToId
     self.box = box
     self.boxId = boxId
@@ -44,6 +46,8 @@ public class ActivityInfo: Codable, Equatable {
     self.leadId = leadId
     self.locationid = locationid
     self.modifiedOn = modifiedOn
+    self.personalizedMessage = personalizedMessage
+    self.place = place
     self.startDate = startDate
     self.state = state
     self.testDriveLog = testDriveLog
@@ -68,6 +72,8 @@ public class ActivityInfo: Codable, Equatable {
     guard self.leadId == object.leadId else { return false }
     guard self.locationid == object.locationid else { return false }
     guard self.modifiedOn == object.modifiedOn else { return false }
+    guard self.personalizedMessage == object.personalizedMessage else { return false }
+    guard self.place == object.place else { return false }
     guard self.startDate == object.startDate else { return false }
     guard self.state == object.state else { return false }
     guard self.testDriveLog == object.testDriveLog else { return false }

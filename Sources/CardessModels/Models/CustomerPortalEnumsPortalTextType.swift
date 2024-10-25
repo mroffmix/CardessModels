@@ -22,4 +22,7 @@ public enum CustomerPortalEnumsPortalTextType: Int, Codable, Equatable, CaseIter
     case fuelConsumptionInfo = 11
     case fuelConsumptionFootnote1 = 12
     case fuelConsumptionFootnote2 = 13
+    case plpSalutationTextService = 14
+    case plpNoInterestDialog = 15
+    case plpOfferRequestDialog = 16
 }

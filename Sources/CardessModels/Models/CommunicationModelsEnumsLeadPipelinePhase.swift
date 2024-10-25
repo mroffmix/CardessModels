@@ -24,6 +24,7 @@ public enum CommunicationModelsEnumsLeadPipelinePhase: Int, Codable, Equatable, 
     case serviceLeadUndefined = 20
     case serviceLeadNew = 25
     case serviceLeadContacted = 30
+    case serviceLeadAppointmentRequested = 32
     case serviceLeadAppointmentPlanned = 35
     case serviceLeadAppointmentConfirmed = 40
     case serviceLeadVehicleIsOnPremises = 45

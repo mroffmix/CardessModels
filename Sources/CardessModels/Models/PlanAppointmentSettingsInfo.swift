@@ -10,6 +10,7 @@ import Foundation
 
 
 public class PlanAppointmentSettingsInfo: Codable, Equatable {
+  public var bookingsEnabledInDays: Int?
   public var daysOfWeek: [Int]?
   public var enabled: Bool?
   public var endHour: Int?
@@ -18,7 +19,8 @@ public class PlanAppointmentSettingsInfo: Codable, Equatable {
   public var slotStepMinutes: Int?
   public var startHour: Int?
 
-  public init(daysOfWeek: [Int]?  = nil, enabled: Bool?  = nil, endHour: Int?  = nil, maxDaysAhead: Int?  = nil, slotSizeMinutes: Int?  = nil, slotStepMinutes: Int?  = nil, startHour: Int?  = nil) {
+  public init(bookingsEnabledInDays: Int?  = nil, daysOfWeek: [Int]?  = nil, enabled: Bool?  = nil, endHour: Int?  = nil, maxDaysAhead: Int?  = nil, slotSizeMinutes: Int?  = nil, slotStepMinutes: Int?  = nil, startHour: Int?  = nil) {
+    self.bookingsEnabledInDays = bookingsEnabledInDays
     self.daysOfWeek = daysOfWeek
     self.enabled = enabled
     self.endHour = endHour
@@ -31,6 +33,7 @@ public class PlanAppointmentSettingsInfo: Codable, Equatable {
 
   public func isEqual(to object: Any?) -> Bool {
     guard let object = object as? PlanAppointmentSettingsInfo else { return false }
+    guard self.bookingsEnabledInDays == object.bookingsEnabledInDays else { return false }
     guard self.daysOfWeek == object.daysOfWeek else { return false }
     guard self.enabled == object.enabled else { return false }
     guard self.endHour == object.endHour else { return false }

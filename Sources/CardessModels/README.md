@@ -288,6 +288,7 @@ To add support for a specific asynchronous library, just add an extension on `AP
 - **ExternalLeadEmailInfo**
 - **ExternalLeadEmailType**
 - **ExternalLeadVehicle**
+- **FacebookBusiness**
 - **FacebookFormList**
 - **FacebookPage**
 - **FacebookPageContainer**
@@ -314,6 +315,7 @@ To add support for a specific asynchronous library, just add an extension on `AP
 - **LeadExportLogInfo**
 - **LeadHistoryData**
 - **LeadInfo**
+- **LeadObjectionInfo**
 - **LeadPersonalDetailsDocumentInfo**
 - **LeadPersonalDetailsInfo**
 - **LeadRequestAutoRespondSettingsInfo**
@@ -361,6 +363,7 @@ To add support for a specific asynchronous library, just add an extension on `AP
 - **ModelGridView**
 - **ModelLead**
 - **ModelLeadAutoAssignSettings**
+- **ModelLeadObjection**
 - **ModelLeadPersonalDetails**
 - **ModelLeadPersonalDetailsDocument**
 - **ModelLeadService**
@@ -370,6 +373,7 @@ To add support for a specific asynchronous library, just add an extension on `AP
 - **ModelLeadVehicleAccessory**
 - **ModelLeadVehicleCalculation**
 - **ModelLeadVehicleDocument**
+- **ModelObjection**
 - **ModelPriceSticker**
 - **ModelResource**
 - **ModelRole**
@@ -378,6 +382,7 @@ To add support for a specific asynchronous library, just add an extension on `AP
 - **ModelUser**
 - **ModelUserRole**
 - **NotificationInfo**
+- **ObjectionInfo**
 - **OfferRequestInfo**
 - **PagedResultlessThanAccessoryInfogreaterThan**
 - **PagedResultlessThanActivityInfogreaterThan**
@@ -405,6 +410,7 @@ To add support for a specific asynchronous library, just add an extension on `AP
 - **PagedResultlessThanMatrixRuleInfogreaterThan**
 - **PagedResultlessThanModelInfogreaterThan**
 - **PagedResultlessThanModellineInfogreaterThan**
+- **PagedResultlessThanObjectionInfogreaterThan**
 - **PagedResultlessThanPortalTextDatagreaterThan**
 - **PagedResultlessThanPriceMatrixInfogreaterThan**
 - **PagedResultlessThanPriceStickergreaterThan**
@@ -598,7 +604,7 @@ To add support for a specific asynchronous library, just add an extension on `AP
 	- **PostApiCampaignByIdVehicleByVehicleId**: POST `/api/campaign/{id}/vehicle/{vehicleid}`
 	- **PutApiCampaignById**: PUT `/api/campaign/{id}`
 - **API.Chat**
-	- **GetApiChatConversationByLeadId**: GET `/api/chat/conversation/{leadid}`
+	- **GetApiChatConversationByLeadIdAll**: GET `/api/chat/conversation/{leadid}/all`
 	- **GetApiChatPhoneNumbers**: GET `/api/chat/phonenumbers`
 	- **GetApiChatTemplates**: GET `/api/chat/templates`
 	- **GetApiChatByLeadId**: GET `/api/chat/{leadid}`
@@ -691,6 +697,7 @@ To add support for a specific asynchronous library, just add an extension on `AP
 - **API.Lead**
 	- **DeleteApiLeadDocumentByDocId**: DELETE `/api/lead/document/{docid}`
 	- **DeleteApiLeadServiceByServiceId**: DELETE `/api/lead/service/{serviceid}`
+	- **DeleteApiLeadByLeadId**: DELETE `/api/lead/{leadid}`
 	- **GetApiLead**: GET `/api/lead`
 	- **GetApiLeadCities**: GET `/api/lead/cities`
 	- **GetApiLeadFind**: GET `/api/lead/find`
@@ -710,6 +717,7 @@ To add support for a specific asynchronous library, just add an extension on `AP
 	- **PutApiLeadPersonaldetailsById**: PUT `/api/lead/personaldetails/{id}`
 	- **PutApiLeadById**: PUT `/api/lead/{id}`
 - **API.LeadImport**
+	- **GetApiLeadImportFacebookBusinesses**: GET `/api/leadimport/facebook/businesses`
 	- **GetApiLeadImportFacebookForms**: GET `/api/leadimport/facebook/forms`
 	- **GetApiLeadImportFacebookPages**: GET `/api/leadimport/facebook/pages`
 	- **PostApiLeadImportFacebookFormByPageId**: POST `/api/leadimport/facebook/form/{pageid}`
@@ -762,6 +770,12 @@ To add support for a specific asynchronous library, just add an extension on `AP
 	- **GetApiNotificationForuserByUserId**: GET `/api/notification/foruser/{userid}`
 	- **PutApiNotificationMarkasreadById**: PUT `/api/notification/markasread/{id}`
 	- **PutApiNotificationMarkasunreadById**: PUT `/api/notification/markasunread/{id}`
+- **API.Objection**
+	- **DeleteApiObjectionById**: DELETE `/api/objection/{id}`
+	- **GetApiObjection**: GET `/api/objection`
+	- **GetApiObjectionById**: GET `/api/objection/{id}`
+	- **PostApiObjection**: POST `/api/objection`
+	- **PutApiObjectionById**: PUT `/api/objection/{id}`
 - **API.Operation**
 	- **PutApiOperationByActivityId**: PUT `/api/operation/{activityid}`
 - **API.PriceMatrix**
@@ -918,6 +932,7 @@ To add support for a specific asynchronous library, just add an extension on `AP
 	- **GetApiTimeSlotDatesUsersSlots**: GET `/api/timeslot/datesusersslots`
 	- **GetApiTimeSlotDeliverySlots**: GET `/api/timeslot/deliveryslots`
 	- **GetApiTimeSlotFirstAvailableSlot**: GET `/api/timeslot/firstavailableslot`
+	- **GetApiTimeSlotHolidays**: GET `/api/timeslot/holidays`
 	- **GetApiTimeSlotUsersSlots**: GET `/api/timeslot/usersslots`
 - **API.Token**
 	- **GetApiToken**: GET `/api/token`

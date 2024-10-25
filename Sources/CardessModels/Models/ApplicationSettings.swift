@@ -15,12 +15,15 @@ public class ApplicationSettings: Codable, Equatable {
   public var customerPortalUrl: String?
   public var dateFormat: String?
   public var defaultCountry: MasterDataCountryInfo?
+  public var defaultCurrencyCode: String?
+  public var defaultLanguageCode: String?
   public var defaultLocationEmail: String?
   public var defaultState: String?
   public var endWorkingHour: Int?
   public var isWhatsAppEnabled: Bool?
   public var locationId: String?
   public var planAppointmentSettings: PlanAppointmentSettingsInfo?
+  public var showVehiclesForTheLocationOnly: Bool?
   public var startWorkingHour: Int?
   public var timeFormat: String?
   public var timeZoneOffset: String?
@@ -28,18 +31,21 @@ public class ApplicationSettings: Codable, Equatable {
   public var twilioOutgoingEnabled: Bool?
   public var twilioPushUrl: String?
 
-  public init(cardessServiceUrl: String?  = nil, categories: [MasterDataEquipmentCategoryInfo]?  = nil, customerPortalUrl: String?  = nil, dateFormat: String?  = nil, defaultCountry: MasterDataCountryInfo?  = nil, defaultLocationEmail: String?  = nil, defaultState: String?  = nil, endWorkingHour: Int?  = nil, isWhatsAppEnabled: Bool?  = nil, locationId: String?  = nil, planAppointmentSettings: PlanAppointmentSettingsInfo?  = nil, startWorkingHour: Int?  = nil, timeFormat: String?  = nil, timeZoneOffset: String? = nil, tradeinEnabled: Bool?  = nil, twilioOutgoingEnabled: Bool?  = nil, twilioPushUrl: String?  = nil) {
+  public init(cardessServiceUrl: String?  = nil, categories: [MasterDataEquipmentCategoryInfo]?  = nil, customerPortalUrl: String?  = nil, dateFormat: String?  = nil, defaultCountry: MasterDataCountryInfo?  = nil, defaultCurrencyCode: String?  = nil, defaultLanguageCode: String?  = nil, defaultLocationEmail: String?  = nil, defaultState: String?  = nil, endWorkingHour: Int?  = nil, isWhatsAppEnabled: Bool?  = nil, locationId: String?  = nil, planAppointmentSettings: PlanAppointmentSettingsInfo?  = nil, showVehiclesForTheLocationOnly: Bool?  = nil, startWorkingHour: Int?  = nil, timeFormat: String?  = nil, timeZoneOffset: String? = nil, tradeinEnabled: Bool?  = nil, twilioOutgoingEnabled: Bool?  = nil, twilioPushUrl: String?  = nil) {
     self.cardessServiceUrl = cardessServiceUrl
     self.categories = categories
     self.customerPortalUrl = customerPortalUrl
     self.dateFormat = dateFormat
     self.defaultCountry = defaultCountry
+    self.defaultCurrencyCode = defaultCurrencyCode
+    self.defaultLanguageCode = defaultLanguageCode
     self.defaultLocationEmail = defaultLocationEmail
     self.defaultState = defaultState
     self.endWorkingHour = endWorkingHour
     self.isWhatsAppEnabled = isWhatsAppEnabled
     self.locationId = locationId
     self.planAppointmentSettings = planAppointmentSettings
+    self.showVehiclesForTheLocationOnly = showVehiclesForTheLocationOnly
     self.startWorkingHour = startWorkingHour
     self.timeFormat = timeFormat
     self.timeZoneOffset = timeZoneOffset
@@ -56,12 +62,15 @@ public class ApplicationSettings: Codable, Equatable {
     guard self.customerPortalUrl == object.customerPortalUrl else { return false }
     guard self.dateFormat == object.dateFormat else { return false }
     guard self.defaultCountry == object.defaultCountry else { return false }
+    guard self.defaultCurrencyCode == object.defaultCurrencyCode else { return false }
+    guard self.defaultLanguageCode == object.defaultLanguageCode else { return false }
     guard self.defaultLocationEmail == object.defaultLocationEmail else { return false }
     guard self.defaultState == object.defaultState else { return false }
     guard self.endWorkingHour == object.endWorkingHour else { return false }
     guard self.isWhatsAppEnabled == object.isWhatsAppEnabled else { return false }
     guard self.locationId == object.locationId else { return false }
     guard self.planAppointmentSettings == object.planAppointmentSettings else { return false }
+    guard self.showVehiclesForTheLocationOnly == object.showVehiclesForTheLocationOnly else { return false }
     guard self.startWorkingHour == object.startWorkingHour else { return false }
     guard self.timeFormat == object.timeFormat else { return false }
     guard self.timeZoneOffset == object.timeZoneOffset else { return false }

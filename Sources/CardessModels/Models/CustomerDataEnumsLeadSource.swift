@@ -13,6 +13,7 @@ public enum CustomerDataEnumsLeadSource: Int, Codable, Equatable, CaseIterable {
     case web = 20
     case facebook = 30
     case instagram = 40
+    case whatsApp = 45
     case google = 50
     case mobileDe = 60
     case autoscout24De = 70

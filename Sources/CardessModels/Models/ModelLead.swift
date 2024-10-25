@@ -17,6 +17,7 @@ public class ModelLead: Codable, Equatable {
   public var allowProfiling: Bool?
   public var allowSms: Bool?
   public var budget: Double?
+  public var campaignId: String?
   public var carState: EnumsCarState?
   public var ccvId: Int?
   public var chatMessages: [ModelChatMessage]?
@@ -56,17 +57,21 @@ public class ModelLead: Codable, Equatable {
   public var idNumber: String?
   public var importSource: EnumsImportLeadSource?
   public var initialRequest: CommunicationModelsEnumsInitialRequest?
+  public var languageCode: String?
   public var lastName: String?
   public var leadMainTriggerType: EnumsEngageTriggerType?
+  public var leadObjections: [ModelLeadObjection]?
   public var leadServices: [ModelLeadService]?
   public var leadTags: [ModelLeadTag]?
   public var leadType: EnumsLeadType?
   public var leadVehicles: [ModelLeadVehicle]?
   public var leasePeriod: Int?
+  public var locationId: String?
   public var mileageTo: Int?
   public var mileageYearly: Int?
   public var modifiedOn: Date?
   public var montlyPaymentAmount: Double?
+  public var objections: String?
   public var personalDetails: [ModelLeadPersonalDetails]?
   public var personalDetailsDocuments: [ModelLeadPersonalDetailsDocument]?
   public var personalizedMessage: String?
@@ -78,6 +83,8 @@ public class ModelLead: Codable, Equatable {
   public var postalCode: String?
   public var prepaymentAmount: Double?
   public var productionYearFrom: Int?
+  public var purchaseTimeframeQuarter: Int?
+  public var purchaseTimeframeYear: Int?
   public var raiting: Int?
   public var remoteConsultingId: String?
   public var responsiblePerson: ModelUser?
@@ -96,7 +103,7 @@ public class ModelLead: Codable, Equatable {
   public var vehicleStatus: VehicleDataEnumsVehicleStatus?
   public var website: String?
 
-  public init(activities: [ModelActivity]?  = nil, allowEmail: Bool?  = nil, allowMessaging: Bool?  = nil, allowPhone: Bool?  = nil, allowProfiling: Bool?  = nil, allowSms: Bool?  = nil, budget: Double?  = nil, carState: EnumsCarState?  = nil, ccvId: Int?  = nil, chatMessages: [ModelChatMessage]?  = nil, city: String?  = nil, cityId: String? = nil, closeReason: EnumsLeadCloseReason?  = nil, comment: String?  = nil, communicationState: EnumsEventType?  = nil, companyName: String?  = nil, countryId: String? = nil, createdOn: Date? = nil, crmExternalCustomerID: String?  = nil, currentCar: String?  = nil, currentCarFinanced: Bool?  = nil, currentCarFinancingEndDate: Date? = nil, currentCarRegistrationDate: Date? = nil, currentVehicleLicensePlate: String?  = nil, currentVehicleMake: String?  = nil, currentVehicleMileage: Int?  = nil, currentVehicleModel: String?  = nil, currentVehicleVin: String?  = nil, customerType: Bool?  = nil, dateOfBirth: Date? = nil, drivingLicenseIssueDate: Date? = nil, drivingLicenseIssuedBy: String?  = nil, drivingLicenseNumber: String?  = nil, email: String?  = nil, externalCustomerID: String?  = nil, externalId: String?  = nil, externalUrl: String?  = nil, facebookId: String?  = nil, financingType: EnumsFinancingType?  = nil, firstName: String?  = nil, id: String? = nil, idIssuedByCity: String?  = nil, idIssuedByCityId: String? = nil, idNumber: String?  = nil, importSource: EnumsImportLeadSource?  = nil, initialRequest: CommunicationModelsEnumsInitialRequest?  = nil, lastName: String?  = nil, leadMainTriggerType: EnumsEngageTriggerType?  = nil, leadServices: [ModelLeadService]?  = nil, leadTags: [ModelLeadTag]?  = nil, leadType: EnumsLeadType?  = nil, leadVehicles: [ModelLeadVehicle]?  = nil, leasePeriod: Int?  = nil, mileageTo: Int?  = nil, mileageYearly: Int?  = nil, modifiedOn: Date? = nil, montlyPaymentAmount: Double?  = nil, personalDetails: [ModelLeadPersonalDetails]?  = nil, personalDetailsDocuments: [ModelLeadPersonalDetailsDocument]?  = nil, personalizedMessage: String?  = nil, phoneCarrierType: EnumsCarrierType?  = nil, phoneNo: String?  = nil, phoneNoSecondary: String?  = nil, pipelinePhase: CommunicationModelsEnumsLeadPipelinePhase?  = nil, pipelinePhaseStartDate: Date? = nil, postalCode: String?  = nil, prepaymentAmount: Double?  = nil, productionYearFrom: Int?  = nil, raiting: Int?  = nil, remoteConsultingId: String?  = nil, responsiblePerson: ModelUser?  = nil, responsiblePersonId: String? = nil, salutation: String?  = nil, searchPhone: String?  = nil, searchPhoneSecondary: String?  = nil, source: CustomerDataEnumsLeadSource?  = nil, state: EnumsLeadStatus?  = nil, stockVehiclesOnly: Bool?  = nil, street: String?  = nil, title: String?  = nil, tradeInCaseId: String?  = nil, tradeInRequested: Bool?  = nil, utmTags: String?  = nil, vehicleStatus: VehicleDataEnumsVehicleStatus?  = nil, website: String?  = nil) {
+  public init(activities: [ModelActivity]?  = nil, allowEmail: Bool?  = nil, allowMessaging: Bool?  = nil, allowPhone: Bool?  = nil, allowProfiling: Bool?  = nil, allowSms: Bool?  = nil, budget: Double?  = nil, campaignId: String? = nil, carState: EnumsCarState?  = nil, ccvId: Int?  = nil, chatMessages: [ModelChatMessage]?  = nil, city: String?  = nil, cityId: String? = nil, closeReason: EnumsLeadCloseReason?  = nil, comment: String?  = nil, communicationState: EnumsEventType?  = nil, companyName: String?  = nil, countryId: String? = nil, createdOn: Date? = nil, crmExternalCustomerID: String?  = nil, currentCar: String?  = nil, currentCarFinanced: Bool?  = nil, currentCarFinancingEndDate: Date? = nil, currentCarRegistrationDate: Date? = nil, currentVehicleLicensePlate: String?  = nil, currentVehicleMake: String?  = nil, currentVehicleMileage: Int?  = nil, currentVehicleModel: String?  = nil, currentVehicleVin: String?  = nil, customerType: Bool?  = nil, dateOfBirth: Date? = nil, drivingLicenseIssueDate: Date? = nil, drivingLicenseIssuedBy: String?  = nil, drivingLicenseNumber: String?  = nil, email: String?  = nil, externalCustomerID: String?  = nil, externalId: String?  = nil, externalUrl: String?  = nil, facebookId: String?  = nil, financingType: EnumsFinancingType?  = nil, firstName: String?  = nil, id: String? = nil, idIssuedByCity: String?  = nil, idIssuedByCityId: String? = nil, idNumber: String?  = nil, importSource: EnumsImportLeadSource?  = nil, initialRequest: CommunicationModelsEnumsInitialRequest?  = nil, languageCode: String?  = nil, lastName: String?  = nil, leadMainTriggerType: EnumsEngageTriggerType?  = nil, leadObjections: [ModelLeadObjection]?  = nil, leadServices: [ModelLeadService]?  = nil, leadTags: [ModelLeadTag]?  = nil, leadType: EnumsLeadType?  = nil, leadVehicles: [ModelLeadVehicle]?  = nil, leasePeriod: Int?  = nil, locationId: String?  = nil, mileageTo: Int?  = nil, mileageYearly: Int?  = nil, modifiedOn: Date? = nil, montlyPaymentAmount: Double?  = nil, objections: String?  = nil, personalDetails: [ModelLeadPersonalDetails]?  = nil, personalDetailsDocuments: [ModelLeadPersonalDetailsDocument]?  = nil, personalizedMessage: String?  = nil, phoneCarrierType: EnumsCarrierType?  = nil, phoneNo: String?  = nil, phoneNoSecondary: String?  = nil, pipelinePhase: CommunicationModelsEnumsLeadPipelinePhase?  = nil, pipelinePhaseStartDate: Date? = nil, postalCode: String?  = nil, prepaymentAmount: Double?  = nil, productionYearFrom: Int?  = nil, purchaseTimeframeQuarter: Int?  = nil, purchaseTimeframeYear: Int?  = nil, raiting: Int?  = nil, remoteConsultingId: String?  = nil, responsiblePerson: ModelUser?  = nil, responsiblePersonId: String? = nil, salutation: String?  = nil, searchPhone: String?  = nil, searchPhoneSecondary: String?  = nil, source: CustomerDataEnumsLeadSource?  = nil, state: EnumsLeadStatus?  = nil, stockVehiclesOnly: Bool?  = nil, street: String?  = nil, title: String?  = nil, tradeInCaseId: String?  = nil, tradeInRequested: Bool?  = nil, utmTags: String?  = nil, vehicleStatus: VehicleDataEnumsVehicleStatus?  = nil, website: String?  = nil) {
     self.activities = activities
     self.allowEmail = allowEmail
     self.allowMessaging = allowMessaging
@@ -104,6 +111,7 @@ public class ModelLead: Codable, Equatable {
     self.allowProfiling = allowProfiling
     self.allowSms = allowSms
     self.budget = budget
+    self.campaignId = campaignId
     self.carState = carState
     self.ccvId = ccvId
     self.chatMessages = chatMessages
@@ -143,17 +151,21 @@ public class ModelLead: Codable, Equatable {
     self.idNumber = idNumber
     self.importSource = importSource
     self.initialRequest = initialRequest
+    self.languageCode = languageCode
     self.lastName = lastName
     self.leadMainTriggerType = leadMainTriggerType
+    self.leadObjections = leadObjections
     self.leadServices = leadServices
     self.leadTags = leadTags
     self.leadType = leadType
     self.leadVehicles = leadVehicles
     self.leasePeriod = leasePeriod
+    self.locationId = locationId
     self.mileageTo = mileageTo
     self.mileageYearly = mileageYearly
     self.modifiedOn = modifiedOn
     self.montlyPaymentAmount = montlyPaymentAmount
+    self.objections = objections
     self.personalDetails = personalDetails
     self.personalDetailsDocuments = personalDetailsDocuments
     self.personalizedMessage = personalizedMessage
@@ -165,6 +177,8 @@ public class ModelLead: Codable, Equatable {
     self.postalCode = postalCode
     self.prepaymentAmount = prepaymentAmount
     self.productionYearFrom = productionYearFrom
+    self.purchaseTimeframeQuarter = purchaseTimeframeQuarter
+    self.purchaseTimeframeYear = purchaseTimeframeYear
     self.raiting = raiting
     self.remoteConsultingId = remoteConsultingId
     self.responsiblePerson = responsiblePerson
@@ -194,6 +208,7 @@ public class ModelLead: Codable, Equatable {
     guard self.allowProfiling == object.allowProfiling else { return false }
     guard self.allowSms == object.allowSms else { return false }
     guard self.budget == object.budget else { return false }
+    guard self.campaignId == object.campaignId else { return false }
     guard self.carState == object.carState else { return false }
     guard self.ccvId == object.ccvId else { return false }
     guard self.chatMessages == object.chatMessages else { return false }
@@ -233,17 +248,21 @@ public class ModelLead: Codable, Equatable {
     guard self.idNumber == object.idNumber else { return false }
     guard self.importSource == object.importSource else { return false }
     guard self.initialRequest == object.initialRequest else { return false }
+    guard self.languageCode == object.languageCode else { return false }
     guard self.lastName == object.lastName else { return false }
     guard self.leadMainTriggerType == object.leadMainTriggerType else { return false }
+    guard self.leadObjections == object.leadObjections else { return false }
     guard self.leadServices == object.leadServices else { return false }
     guard self.leadTags == object.leadTags else { return false }
     guard self.leadType == object.leadType else { return false }
     guard self.leadVehicles == object.leadVehicles else { return false }
     guard self.leasePeriod == object.leasePeriod else { return false }
+    guard self.locationId == object.locationId else { return false }
     guard self.mileageTo == object.mileageTo else { return false }
     guard self.mileageYearly == object.mileageYearly else { return false }
     guard self.modifiedOn == object.modifiedOn else { return false }
     guard self.montlyPaymentAmount == object.montlyPaymentAmount else { return false }
+    guard self.objections == object.objections else { return false }
     guard self.personalDetails == object.personalDetails else { return false }
     guard self.personalDetailsDocuments == object.personalDetailsDocuments else { return false }
     guard self.personalizedMessage == object.personalizedMessage else { return false }
@@ -255,6 +274,8 @@ public class ModelLead: Codable, Equatable {
     guard self.postalCode == object.postalCode else { return false }
     guard self.prepaymentAmount == object.prepaymentAmount else { return false }
     guard self.productionYearFrom == object.productionYearFrom else { return false }
+    guard self.purchaseTimeframeQuarter == object.purchaseTimeframeQuarter else { return false }
+    guard self.purchaseTimeframeYear == object.purchaseTimeframeYear else { return false }
     guard self.raiting == object.raiting else { return false }
     guard self.remoteConsultingId == object.remoteConsultingId else { return false }
     guard self.responsiblePerson == object.responsiblePerson else { return false }

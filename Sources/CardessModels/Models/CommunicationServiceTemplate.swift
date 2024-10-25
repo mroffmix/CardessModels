@@ -17,11 +17,12 @@ public class CommunicationServiceTemplate: Codable, Equatable {
   public var editUrl: String?
   public var entityId: String?
   public var id: String?
+  public var languageCode: String?
   public var locationId: String?
   public var name: String?
   public var type: CommunicationServiceEnumsTemplateType?
 
-  public init(allowPersonalMessage: Bool?  = nil, body: String?  = nil, contentId: String?  = nil, contentName: String?  = nil, editUrl: String?  = nil, entityId: String? = nil, id: String? = nil, locationId: String?  = nil, name: String?  = nil, type: CommunicationServiceEnumsTemplateType?  = nil) {
+  public init(allowPersonalMessage: Bool?  = nil, body: String?  = nil, contentId: String?  = nil, contentName: String?  = nil, editUrl: String?  = nil, entityId: String? = nil, id: String? = nil, languageCode: String?  = nil, locationId: String?  = nil, name: String?  = nil, type: CommunicationServiceEnumsTemplateType?  = nil) {
     self.allowPersonalMessage = allowPersonalMessage
     self.body = body
     self.contentId = contentId
@@ -29,6 +30,7 @@ public class CommunicationServiceTemplate: Codable, Equatable {
     self.editUrl = editUrl
     self.entityId = entityId
     self.id = id
+    self.languageCode = languageCode
     self.locationId = locationId
     self.name = name
     self.type = type
@@ -44,6 +46,7 @@ public class CommunicationServiceTemplate: Codable, Equatable {
     guard self.editUrl == object.editUrl else { return false }
     guard self.entityId == object.entityId else { return false }
     guard self.id == object.id else { return false }
+    guard self.languageCode == object.languageCode else { return false }
     guard self.locationId == object.locationId else { return false }
     guard self.name == object.name else { return false }
     guard self.type == object.type else { return false }

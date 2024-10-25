@@ -17,11 +17,12 @@ public class LeadThreadInfo: Codable, Equatable {
   public var id: String?
   public var lead: LeadInfo?
   public var leadId: String?
+  public var messageSource: EnumsMessageSource?
   public var modifiedOn: Date?
   public var threadId: String?
   public var toAccount: String?
 
-  public init(autoResponse: Bool?  = nil, clientAccount: String?  = nil, conversationId: String?  = nil, createdOn: Date? = nil, id: String? = nil, lead: LeadInfo?  = nil, leadId: String? = nil, modifiedOn: Date? = nil, threadId: String?  = nil, toAccount: String?  = nil) {
+  public init(autoResponse: Bool?  = nil, clientAccount: String?  = nil, conversationId: String?  = nil, createdOn: Date? = nil, id: String? = nil, lead: LeadInfo?  = nil, leadId: String? = nil, messageSource: EnumsMessageSource?  = nil, modifiedOn: Date? = nil, threadId: String?  = nil, toAccount: String?  = nil) {
     self.autoResponse = autoResponse
     self.clientAccount = clientAccount
     self.conversationId = conversationId
@@ -29,6 +30,7 @@ public class LeadThreadInfo: Codable, Equatable {
     self.id = id
     self.lead = lead
     self.leadId = leadId
+    self.messageSource = messageSource
     self.modifiedOn = modifiedOn
     self.threadId = threadId
     self.toAccount = toAccount
@@ -44,6 +46,7 @@ public class LeadThreadInfo: Codable, Equatable {
     guard self.id == object.id else { return false }
     guard self.lead == object.lead else { return false }
     guard self.leadId == object.leadId else { return false }
+    guard self.messageSource == object.messageSource else { return false }
     guard self.modifiedOn == object.modifiedOn else { return false }
     guard self.threadId == object.threadId else { return false }
     guard self.toAccount == object.toAccount else { return false }

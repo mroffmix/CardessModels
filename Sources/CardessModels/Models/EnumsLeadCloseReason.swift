@@ -18,6 +18,7 @@ public enum EnumsLeadCloseReason: Int, Codable, Equatable, CaseIterable {
     case refinance = 7
     case keepCurrentCar = 8
     case spam = 9
+    case notQualified = 15
     case serviceLeadNotReached = 20
     case serviceLeadWrongContactDetails = 25
     case serviceLeadVehicleIsSold = 30

@@ -16,17 +16,19 @@ public class ModelLeadService: Codable, Equatable {
   public var lead: ModelLead?
   public var leadId: String?
   public var price: Double?
+  public var selected: Bool?
   public var service: ModelService?
   public var serviceId: String?
   public var title: String?
 
-  public init(code: String?  = nil, description: String?  = nil, id: String? = nil, lead: ModelLead?  = nil, leadId: String? = nil, price: Double?  = nil, service: ModelService?  = nil, serviceId: String? = nil, title: String?  = nil) {
+  public init(code: String?  = nil, description: String?  = nil, id: String? = nil, lead: ModelLead?  = nil, leadId: String? = nil, price: Double?  = nil, selected: Bool?  = nil, service: ModelService?  = nil, serviceId: String? = nil, title: String?  = nil) {
     self.code = code
     self.description = description
     self.id = id
     self.lead = lead
     self.leadId = leadId
     self.price = price
+    self.selected = selected
     self.service = service
     self.serviceId = serviceId
     self.title = title
@@ -41,6 +43,7 @@ public class ModelLeadService: Codable, Equatable {
     guard self.lead == object.lead else { return false }
     guard self.leadId == object.leadId else { return false }
     guard self.price == object.price else { return false }
+    guard self.selected == object.selected else { return false }
     guard self.service == object.service else { return false }
     guard self.serviceId == object.serviceId else { return false }
     guard self.title == object.title else { return false }

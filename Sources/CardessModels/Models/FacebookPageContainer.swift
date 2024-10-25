@@ -10,11 +10,13 @@ import Foundation
 
 
 public class FacebookPageContainer: Codable, Equatable {
+  public var business: FacebookBusiness?
   public var page: FacebookPage?
   public var status: Bool?
   public var subscription: FacebookPageSubscription?
 
-  public init(page: FacebookPage?  = nil, status: Bool?  = nil, subscription: FacebookPageSubscription?  = nil) {
+  public init(business: FacebookBusiness?  = nil, page: FacebookPage?  = nil, status: Bool?  = nil, subscription: FacebookPageSubscription?  = nil) {
+    self.business = business
     self.page = page
     self.status = status
     self.subscription = subscription
@@ -23,6 +25,7 @@ public class FacebookPageContainer: Codable, Equatable {
 
   public func isEqual(to object: Any?) -> Bool {
     guard let object = object as? FacebookPageContainer else { return false }
+    guard self.business == object.business else { return false }
     guard self.page == object.page else { return false }
     guard self.status == object.status else { return false }
     guard self.subscription == object.subscription else { return false }

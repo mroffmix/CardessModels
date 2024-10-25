@@ -10,11 +10,13 @@ import Foundation
 
 
 public class HooksFacebookFacebookPageMappingInfo: Codable, Equatable {
+  public var countryCode: String?
   public var id: String?
   public var locationId: Int?
   public var pageId: String?
 
-  public init(id: String? = nil, locationId: Int?  = nil, pageId: String?  = nil) {
+  public init(countryCode: String?  = nil, id: String? = nil, locationId: Int?  = nil, pageId: String?  = nil) {
+    self.countryCode = countryCode
     self.id = id
     self.locationId = locationId
     self.pageId = pageId
@@ -23,6 +25,7 @@ public class HooksFacebookFacebookPageMappingInfo: Codable, Equatable {
 
   public func isEqual(to object: Any?) -> Bool {
     guard let object = object as? HooksFacebookFacebookPageMappingInfo else { return false }
+    guard self.countryCode == object.countryCode else { return false }
     guard self.id == object.id else { return false }
     guard self.locationId == object.locationId else { return false }
     guard self.pageId == object.pageId else { return false }

@@ -10,5 +10,5 @@ import Foundation
 public enum CustomerDataEnumsImportCustomerSource: Int, Codable, Equatable, CaseIterable {
     case local = 0
     case unknown = 1
-    case haystack = 2
+    case cardessEngage = 2
 }

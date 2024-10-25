@@ -12,6 +12,7 @@ import Foundation
 public class ToolsCsvWriterCsvExportParameters: Codable, Equatable {
   public var delimiter: String?
   public var entityName: String?
+  public var excludeSubentities: Bool?
   public var fieldNames: [KeyValuePairlessThanStringStringgreaterThan]?
   public var filter: String?
   public var newLine: String?
@@ -23,9 +24,10 @@ public class ToolsCsvWriterCsvExportParameters: Codable, Equatable {
   public var useQuotes: Bool?
   public var withHeader: Bool?
 
-  public init(delimiter: String?  = nil, entityName: String?  = nil, fieldNames: [KeyValuePairlessThanStringStringgreaterThan]?  = nil, filter: String?  = nil, newLine: String?  = nil, page: Int?  = nil, pageSize: Int?  = nil, skipSort: Bool?  = nil, sortAscending: Bool?  = nil, sortField: String?  = nil, useQuotes: Bool?  = nil, withHeader: Bool?  = nil) {
+  public init(delimiter: String?  = nil, entityName: String?  = nil, excludeSubentities: Bool?  = nil, fieldNames: [KeyValuePairlessThanStringStringgreaterThan]?  = nil, filter: String?  = nil, newLine: String?  = nil, page: Int?  = nil, pageSize: Int?  = nil, skipSort: Bool?  = nil, sortAscending: Bool?  = nil, sortField: String?  = nil, useQuotes: Bool?  = nil, withHeader: Bool?  = nil) {
     self.delimiter = delimiter
     self.entityName = entityName
+    self.excludeSubentities = excludeSubentities
     self.fieldNames = fieldNames
     self.filter = filter
     self.newLine = newLine
@@ -43,6 +45,7 @@ public class ToolsCsvWriterCsvExportParameters: Codable, Equatable {
     guard let object = object as? ToolsCsvWriterCsvExportParameters else { return false }
     guard self.delimiter == object.delimiter else { return false }
     guard self.entityName == object.entityName else { return false }
+    guard self.excludeSubentities == object.excludeSubentities else { return false }
     guard self.fieldNames == object.fieldNames else { return false }
     guard self.filter == object.filter else { return false }
     guard self.newLine == object.newLine else { return false }
