@@ -13,6 +13,7 @@ public class UserInfo: Codable, Equatable {
   public var email: String?
   public var id: String?
   public var isActive: Bool?
+  public var locale: String?
   public var login: String?
   public var name: String?
   public var password: String?
@@ -24,10 +25,11 @@ public class UserInfo: Codable, Equatable {
   public var state: EnumsUserState?
   public var type: EnumsUserType?
 
-  public init(email: String?  = nil, id: String? = nil, isActive: Bool?  = nil, login: String?  = nil, name: String?  = nil, password: String?  = nil, phoneNo: String?  = nil, position: String?  = nil, profileImage: String?  = nil, roles: [RoleInfo]?  = nil, signature: String?  = nil, state: EnumsUserState?  = nil, type: EnumsUserType?  = nil) {
+  public init(email: String?  = nil, id: String? = nil, isActive: Bool?  = nil, locale: String?  = nil, login: String?  = nil, name: String?  = nil, password: String?  = nil, phoneNo: String?  = nil, position: String?  = nil, profileImage: String?  = nil, roles: [RoleInfo]?  = nil, signature: String?  = nil, state: EnumsUserState?  = nil, type: EnumsUserType?  = nil) {
     self.email = email
     self.id = id
     self.isActive = isActive
+    self.locale = locale
     self.login = login
     self.name = name
     self.password = password
@@ -46,6 +48,7 @@ public class UserInfo: Codable, Equatable {
     guard self.email == object.email else { return false }
     guard self.id == object.id else { return false }
     guard self.isActive == object.isActive else { return false }
+    guard self.locale == object.locale else { return false }
     guard self.login == object.login else { return false }
     guard self.name == object.name else { return false }
     guard self.password == object.password else { return false }

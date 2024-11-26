@@ -193,6 +193,8 @@ To add support for a specific asynchronous library, just add an extension on `AP
 - **CommunicationRemoteConsultingVehicleOverview**
 - **CommunicationServiceEntity**
 - **CommunicationServiceEnumsEventSenderType**
+- **CommunicationServiceEnumsExternalDeliveryState**
+- **CommunicationServiceEnumsExternalEngagementState**
 - **CommunicationServiceEnumsTemplateType**
 - **CommunicationServiceMessage**
 - **CommunicationServiceRenderedMessage**
@@ -232,6 +234,7 @@ To add support for a specific asynchronous library, just add an extension on `AP
 - **CommunicationTradeInValuationType**
 - **CommunicationTradeInVehicleEvaluation**
 - **CommunicationVehicleTaxonomyValues**
+- **ControllersLeadImportControllerFacebookRegisterRequest**
 - **CustomerDataAssignationCustomerInfo**
 - **CustomerDataCustomerCurrentVehicleInfo**
 - **CustomerDataCustomerInfo**
@@ -293,6 +296,11 @@ To add support for a specific asynchronous library, just add an extension on `AP
 - **FacebookPage**
 - **FacebookPageContainer**
 - **FacebookPageSubscription**
+- **FacebookWABusiness**
+- **FacebookWAContainer**
+- **FacebookWAPhoneNumber**
+- **FacebookWAPhoneNumberThroughput**
+- **FacebookWAPhoneNumberWebhookConfiguration**
 - **FilterItemInfo**
 - **FullLeadVehicleData**
 - **GridViewInfo**
@@ -720,7 +728,9 @@ To add support for a specific asynchronous library, just add an extension on `AP
 	- **GetApiLeadImportFacebookBusinesses**: GET `/api/leadimport/facebook/businesses`
 	- **GetApiLeadImportFacebookForms**: GET `/api/leadimport/facebook/forms`
 	- **GetApiLeadImportFacebookPages**: GET `/api/leadimport/facebook/pages`
+	- **GetApiLeadImportFacebookWabusinesses**: GET `/api/leadimport/facebook/wabusinesses`
 	- **PostApiLeadImportFacebookFormByPageId**: POST `/api/leadimport/facebook/form/{pageid}`
+	- **PostApiLeadImportFacebookRegister**: POST `/api/leadimport/facebook/register`
 	- **PostApiLeadImportFacebookSubscribe**: POST `/api/leadimport/facebook/subscribe`
 - **API.LeadIntegration**
 	- **PostApiExtLeadIntegrationAttachByMessageIdByFilename**: POST `/api/ext/leadintegration/attach/{messageid}/{filename}`

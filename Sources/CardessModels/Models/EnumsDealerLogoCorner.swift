@@ -12,4 +12,5 @@ public enum EnumsDealerLogoCorner: Int, Codable, Equatable, CaseIterable {
     case topRight = 1
     case bottomLeft = 2
     case bottomRight = 3
+    case noLogo = 4
 }

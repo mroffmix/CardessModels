@@ -21,16 +21,25 @@ public class RegisterToEventData: Codable, Equatable {
   public var comment: String?
   public var companyName: String?
   public var countryId: String?
+  public var dateOfBirth: Date?
+  public var drivingLicenseIssueDate: Date?
+  public var drivingLicenseIssuedBy: String?
+  public var drivingLicenseNumber: String?
   public var email: String?
   public var fingerPrint: String?
   public var firstName: String?
   public var id: String?
+  public var idIssuedByCity: String?
+  public var idIssuedByCityId: String?
+  public var idNumber: String?
   public var initialRequest: CommunicationModelsEnumsInitialRequest?
   public var lastName: String?
   public var leadType: EnumsLeadType?
   public var locationId: String?
+  public var mainLocationId: String?
   public var onlineProcessId: String?
   public var phoneNo: String?
+  public var place: String?
   public var postalCode: String?
   public var preferredActivityType: EnumsActivityType?
   public var preferredEndDate: Date?
@@ -51,7 +60,7 @@ public class RegisterToEventData: Codable, Equatable {
   public var vin: String?
   public var website: String?
 
-  public init(allowEmail: Bool?  = nil, allowMessaging: Bool?  = nil, allowPhone: Bool?  = nil, allowProfiling: Bool?  = nil, allowSms: Bool?  = nil, assignedToId: String? = nil, city: String?  = nil, cityId: String? = nil, comment: String?  = nil, companyName: String?  = nil, countryId: String? = nil, email: String?  = nil, fingerPrint: String?  = nil, firstName: String?  = nil, id: String? = nil, initialRequest: CommunicationModelsEnumsInitialRequest?  = nil, lastName: String?  = nil, leadType: EnumsLeadType?  = nil, locationId: String?  = nil, onlineProcessId: String? = nil, phoneNo: String?  = nil, postalCode: String?  = nil, preferredActivityType: EnumsActivityType?  = nil, preferredEndDate: Date? = nil, preferredStartDate: Date? = nil, preferredTime: Date? = nil, price: Double?  = nil, requestType: EnumsRequestContactType?  = nil, salutation: String?  = nil, source: String?  = nil, street: String?  = nil, tags: [MasterDataTagInfo]?  = nil, tagsText: String?  = nil, title: String?  = nil, tradeInCaseId: String?  = nil, utmTags: String?  = nil, vehicleId: String? = nil, vehicleInternalNumber: String?  = nil, vin: String?  = nil, website: String?  = nil) {
+  public init(allowEmail: Bool?  = nil, allowMessaging: Bool?  = nil, allowPhone: Bool?  = nil, allowProfiling: Bool?  = nil, allowSms: Bool?  = nil, assignedToId: String? = nil, city: String?  = nil, cityId: String? = nil, comment: String?  = nil, companyName: String?  = nil, countryId: String? = nil, dateOfBirth: Date? = nil, drivingLicenseIssueDate: Date? = nil, drivingLicenseIssuedBy: String?  = nil, drivingLicenseNumber: String?  = nil, email: String?  = nil, fingerPrint: String?  = nil, firstName: String?  = nil, id: String? = nil, idIssuedByCity: String?  = nil, idIssuedByCityId: String? = nil, idNumber: String?  = nil, initialRequest: CommunicationModelsEnumsInitialRequest?  = nil, lastName: String?  = nil, leadType: EnumsLeadType?  = nil, locationId: String?  = nil, mainLocationId: String?  = nil, onlineProcessId: String? = nil, phoneNo: String?  = nil, place: String?  = nil, postalCode: String?  = nil, preferredActivityType: EnumsActivityType?  = nil, preferredEndDate: Date? = nil, preferredStartDate: Date? = nil, preferredTime: Date? = nil, price: Double?  = nil, requestType: EnumsRequestContactType?  = nil, salutation: String?  = nil, source: String?  = nil, street: String?  = nil, tags: [MasterDataTagInfo]?  = nil, tagsText: String?  = nil, title: String?  = nil, tradeInCaseId: String?  = nil, utmTags: String?  = nil, vehicleId: String? = nil, vehicleInternalNumber: String?  = nil, vin: String?  = nil, website: String?  = nil) {
     self.allowEmail = allowEmail
     self.allowMessaging = allowMessaging
     self.allowPhone = allowPhone
@@ -63,16 +72,25 @@ public class RegisterToEventData: Codable, Equatable {
     self.comment = comment
     self.companyName = companyName
     self.countryId = countryId
+    self.dateOfBirth = dateOfBirth
+    self.drivingLicenseIssueDate = drivingLicenseIssueDate
+    self.drivingLicenseIssuedBy = drivingLicenseIssuedBy
+    self.drivingLicenseNumber = drivingLicenseNumber
     self.email = email
     self.fingerPrint = fingerPrint
     self.firstName = firstName
     self.id = id
+    self.idIssuedByCity = idIssuedByCity
+    self.idIssuedByCityId = idIssuedByCityId
+    self.idNumber = idNumber
     self.initialRequest = initialRequest
     self.lastName = lastName
     self.leadType = leadType
     self.locationId = locationId
+    self.mainLocationId = mainLocationId
     self.onlineProcessId = onlineProcessId
     self.phoneNo = phoneNo
+    self.place = place
     self.postalCode = postalCode
     self.preferredActivityType = preferredActivityType
     self.preferredEndDate = preferredEndDate
@@ -108,16 +126,25 @@ public class RegisterToEventData: Codable, Equatable {
     guard self.comment == object.comment else { return false }
     guard self.companyName == object.companyName else { return false }
     guard self.countryId == object.countryId else { return false }
+    guard self.dateOfBirth == object.dateOfBirth else { return false }
+    guard self.drivingLicenseIssueDate == object.drivingLicenseIssueDate else { return false }
+    guard self.drivingLicenseIssuedBy == object.drivingLicenseIssuedBy else { return false }
+    guard self.drivingLicenseNumber == object.drivingLicenseNumber else { return false }
     guard self.email == object.email else { return false }
     guard self.fingerPrint == object.fingerPrint else { return false }
     guard self.firstName == object.firstName else { return false }
     guard self.id == object.id else { return false }
+    guard self.idIssuedByCity == object.idIssuedByCity else { return false }
+    guard self.idIssuedByCityId == object.idIssuedByCityId else { return false }
+    guard self.idNumber == object.idNumber else { return false }
     guard self.initialRequest == object.initialRequest else { return false }
     guard self.lastName == object.lastName else { return false }
     guard self.leadType == object.leadType else { return false }
     guard self.locationId == object.locationId else { return false }
+    guard self.mainLocationId == object.mainLocationId else { return false }
     guard self.onlineProcessId == object.onlineProcessId else { return false }
     guard self.phoneNo == object.phoneNo else { return false }
+    guard self.place == object.place else { return false }
     guard self.postalCode == object.postalCode else { return false }
     guard self.preferredActivityType == object.preferredActivityType else { return false }
     guard self.preferredEndDate == object.preferredEndDate else { return false }

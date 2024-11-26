@@ -10,13 +10,21 @@ import Foundation
 
 
 public class CommunicationServiceMessage: Codable, Equatable {
+  public var asmGroupId: String?
   public var data: String?
   public var endDate: Date?
   public var extId: String?
+  public var externalDeliveryState: CommunicationServiceEnumsExternalDeliveryState?
+  public var externalDeliveryStateDate: Date?
+  public var externalDeliveryStateReason: String?
+  public var externalEngagementState: CommunicationServiceEnumsExternalEngagementState?
+  public var externalEngagementStateDate: Date?
+  public var externalMessageId: String?
   public var failureReason: String?
   public var from: String?
   public var fromCaption: String?
   public var id: String?
+  public var locationId: String?
   public var requestedSentAt: Date?
   public var sentAt: Date?
   public var startDate: Date?
@@ -25,14 +33,22 @@ public class CommunicationServiceMessage: Codable, Equatable {
   public var to: String?
   public var toCaption: String?
 
-  public init(data: String?  = nil, endDate: Date? = nil, extId: String?  = nil, failureReason: String?  = nil, from: String?  = nil, fromCaption: String?  = nil, id: String? = nil, requestedSentAt: Date? = nil, sentAt: Date? = nil, startDate: Date? = nil, subject: String?  = nil, templateId: String? = nil, to: String?  = nil, toCaption: String?  = nil) {
+  public init(asmGroupId: String?  = nil, data: String?  = nil, endDate: Date? = nil, extId: String?  = nil, externalDeliveryState: CommunicationServiceEnumsExternalDeliveryState?  = nil, externalDeliveryStateDate: Date? = nil, externalDeliveryStateReason: String?  = nil, externalEngagementState: CommunicationServiceEnumsExternalEngagementState?  = nil, externalEngagementStateDate: Date? = nil, externalMessageId: String?  = nil, failureReason: String?  = nil, from: String?  = nil, fromCaption: String?  = nil, id: String? = nil, locationId: String?  = nil, requestedSentAt: Date? = nil, sentAt: Date? = nil, startDate: Date? = nil, subject: String?  = nil, templateId: String? = nil, to: String?  = nil, toCaption: String?  = nil) {
+    self.asmGroupId = asmGroupId
     self.data = data
     self.endDate = endDate
     self.extId = extId
+    self.externalDeliveryState = externalDeliveryState
+    self.externalDeliveryStateDate = externalDeliveryStateDate
+    self.externalDeliveryStateReason = externalDeliveryStateReason
+    self.externalEngagementState = externalEngagementState
+    self.externalEngagementStateDate = externalEngagementStateDate
+    self.externalMessageId = externalMessageId
     self.failureReason = failureReason
     self.from = from
     self.fromCaption = fromCaption
     self.id = id
+    self.locationId = locationId
     self.requestedSentAt = requestedSentAt
     self.sentAt = sentAt
     self.startDate = startDate
@@ -45,13 +61,21 @@ public class CommunicationServiceMessage: Codable, Equatable {
 
   public func isEqual(to object: Any?) -> Bool {
     guard let object = object as? CommunicationServiceMessage else { return false }
+    guard self.asmGroupId == object.asmGroupId else { return false }
     guard self.data == object.data else { return false }
     guard self.endDate == object.endDate else { return false }
     guard self.extId == object.extId else { return false }
+    guard self.externalDeliveryState == object.externalDeliveryState else { return false }
+    guard self.externalDeliveryStateDate == object.externalDeliveryStateDate else { return false }
+    guard self.externalDeliveryStateReason == object.externalDeliveryStateReason else { return false }
+    guard self.externalEngagementState == object.externalEngagementState else { return false }
+    guard self.externalEngagementStateDate == object.externalEngagementStateDate else { return false }
+    guard self.externalMessageId == object.externalMessageId else { return false }
     guard self.failureReason == object.failureReason else { return false }
     guard self.from == object.from else { return false }
     guard self.fromCaption == object.fromCaption else { return false }
     guard self.id == object.id else { return false }
+    guard self.locationId == object.locationId else { return false }
     guard self.requestedSentAt == object.requestedSentAt else { return false }
     guard self.sentAt == object.sentAt else { return false }
     guard self.startDate == object.startDate else { return false }

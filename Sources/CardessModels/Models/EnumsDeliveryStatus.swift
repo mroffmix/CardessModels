@@ -12,4 +12,6 @@ public enum EnumsDeliveryStatus: Int, Codable, Equatable, CaseIterable {
     case delivered = 1
     case inProgress = 2
     case failed = 3
+    case completed = 4
+    case cancelled = 5
 }

@@ -10,6 +10,7 @@ import Foundation
 
 
 public class ApplicationSettings: Codable, Equatable {
+  public var asmGroupId: String?
   public var cardessServiceUrl: String?
   public var categories: [MasterDataEquipmentCategoryInfo]?
   public var customerPortalUrl: String?
@@ -31,7 +32,8 @@ public class ApplicationSettings: Codable, Equatable {
   public var twilioOutgoingEnabled: Bool?
   public var twilioPushUrl: String?
 
-  public init(cardessServiceUrl: String?  = nil, categories: [MasterDataEquipmentCategoryInfo]?  = nil, customerPortalUrl: String?  = nil, dateFormat: String?  = nil, defaultCountry: MasterDataCountryInfo?  = nil, defaultCurrencyCode: String?  = nil, defaultLanguageCode: String?  = nil, defaultLocationEmail: String?  = nil, defaultState: String?  = nil, endWorkingHour: Int?  = nil, isWhatsAppEnabled: Bool?  = nil, locationId: String?  = nil, planAppointmentSettings: PlanAppointmentSettingsInfo?  = nil, showVehiclesForTheLocationOnly: Bool?  = nil, startWorkingHour: Int?  = nil, timeFormat: String?  = nil, timeZoneOffset: String? = nil, tradeinEnabled: Bool?  = nil, twilioOutgoingEnabled: Bool?  = nil, twilioPushUrl: String?  = nil) {
+  public init(asmGroupId: String?  = nil, cardessServiceUrl: String?  = nil, categories: [MasterDataEquipmentCategoryInfo]?  = nil, customerPortalUrl: String?  = nil, dateFormat: String?  = nil, defaultCountry: MasterDataCountryInfo?  = nil, defaultCurrencyCode: String?  = nil, defaultLanguageCode: String?  = nil, defaultLocationEmail: String?  = nil, defaultState: String?  = nil, endWorkingHour: Int?  = nil, isWhatsAppEnabled: Bool?  = nil, locationId: String?  = nil, planAppointmentSettings: PlanAppointmentSettingsInfo?  = nil, showVehiclesForTheLocationOnly: Bool?  = nil, startWorkingHour: Int?  = nil, timeFormat: String?  = nil, timeZoneOffset: String? = nil, tradeinEnabled: Bool?  = nil, twilioOutgoingEnabled: Bool?  = nil, twilioPushUrl: String?  = nil) {
+    self.asmGroupId = asmGroupId
     self.cardessServiceUrl = cardessServiceUrl
     self.categories = categories
     self.customerPortalUrl = customerPortalUrl
@@ -57,6 +59,7 @@ public class ApplicationSettings: Codable, Equatable {
 
   public func isEqual(to object: Any?) -> Bool {
     guard let object = object as? ApplicationSettings else { return false }
+    guard self.asmGroupId == object.asmGroupId else { return false }
     guard self.cardessServiceUrl == object.cardessServiceUrl else { return false }
     guard self.categories == object.categories else { return false }
     guard self.customerPortalUrl == object.customerPortalUrl else { return false }
