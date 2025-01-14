@@ -19,6 +19,7 @@ public class ModelUser: Codable, Equatable {
   public var leadAutoAssignSettings: [ModelLeadAutoAssignSettings]?
   public var leadSourceTimeframeSettings: [ModelLeadSourceTimeframeSettings]?
   public var locale: String?
+  public var locationId: String?
   public var login: String?
   public var name: String?
   public var password: String?
@@ -30,7 +31,7 @@ public class ModelUser: Codable, Equatable {
   public var userRoles: [ModelUserRole]?
   public var views: [ModelGridView]?
 
-  public init(callRedirectSettings: [ModelCallRedirectSettings]?  = nil, email: String?  = nil, externalAccountId: String?  = nil, id: String? = nil, isActive: Bool?  = nil, jobTitle: String?  = nil, leadAutoAssignSettings: [ModelLeadAutoAssignSettings]?  = nil, leadSourceTimeframeSettings: [ModelLeadSourceTimeframeSettings]?  = nil, locale: String?  = nil, login: String?  = nil, name: String?  = nil, password: String?  = nil, phoneNo: String?  = nil, profileImage: String?  = nil, signature: String?  = nil, state: EnumsUserState?  = nil, type: EnumsUserType?  = nil, userRoles: [ModelUserRole]?  = nil, views: [ModelGridView]?  = nil) {
+  public init(callRedirectSettings: [ModelCallRedirectSettings]?  = nil, email: String?  = nil, externalAccountId: String?  = nil, id: String? = nil, isActive: Bool?  = nil, jobTitle: String?  = nil, leadAutoAssignSettings: [ModelLeadAutoAssignSettings]?  = nil, leadSourceTimeframeSettings: [ModelLeadSourceTimeframeSettings]?  = nil, locale: String?  = nil, locationId: String?  = nil, login: String?  = nil, name: String?  = nil, password: String?  = nil, phoneNo: String?  = nil, profileImage: String?  = nil, signature: String?  = nil, state: EnumsUserState?  = nil, type: EnumsUserType?  = nil, userRoles: [ModelUserRole]?  = nil, views: [ModelGridView]?  = nil) {
     self.callRedirectSettings = callRedirectSettings
     self.email = email
     self.externalAccountId = externalAccountId
@@ -40,6 +41,7 @@ public class ModelUser: Codable, Equatable {
     self.leadAutoAssignSettings = leadAutoAssignSettings
     self.leadSourceTimeframeSettings = leadSourceTimeframeSettings
     self.locale = locale
+    self.locationId = locationId
     self.login = login
     self.name = name
     self.password = password
@@ -64,6 +66,7 @@ public class ModelUser: Codable, Equatable {
     guard self.leadAutoAssignSettings == object.leadAutoAssignSettings else { return false }
     guard self.leadSourceTimeframeSettings == object.leadSourceTimeframeSettings else { return false }
     guard self.locale == object.locale else { return false }
+    guard self.locationId == object.locationId else { return false }
     guard self.login == object.login else { return false }
     guard self.name == object.name else { return false }
     guard self.password == object.password else { return false }

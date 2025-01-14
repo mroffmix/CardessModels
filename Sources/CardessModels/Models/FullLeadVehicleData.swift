@@ -22,6 +22,8 @@ public class FullLeadVehicleData: Codable, Equatable {
   public var creditPeriod: Double?
   public var dealerDiscountRuleId: String?
   public var dealerLocationId: String?
+  public var desiredMonthlyRateBrutto: Double?
+  public var desiredMonthlyRateNetto: Double?
   public var documents: [LeadVehicleDocumentInfo]?
   public var expectedAnnualMileage: Double?
   public var fixedExpectedAnnualMileage: Double?
@@ -48,7 +50,7 @@ public class FullLeadVehicleData: Codable, Equatable {
   public var vehicleBookingId: String?
   public var vehicleId: String?
 
-  public init(aboCalculation: VehicleDataAboPackageInfo?  = nil, aboRate: Double?  = nil, accessories: [LeadVehicleAccessoryInfo]?  = nil, applicationType: CommunicationModelsEnumsApplicationType?  = nil, balloon: Double?  = nil, calculations: [LeadVehicleCalculationInfo]?  = nil, colourId: String? = nil, comment: String?  = nil, createdOn: Date? = nil, creditPeriod: Double?  = nil, dealerDiscountRuleId: String? = nil, dealerLocationId: String?  = nil, documents: [LeadVehicleDocumentInfo]?  = nil, expectedAnnualMileage: Double?  = nil, fixedExpectedAnnualMileage: Double?  = nil, id: String? = nil, isBusinessCustomer: Bool?  = nil, isInsurancePackageIncluded: Bool?  = nil, isServicePackageIncluded: Bool?  = nil, lead: LeadInfo?  = nil, leadId: String? = nil, leadVehicleType: CommunicationModelsEnumsLeadVehicleType?  = nil, leasingCalculation: VehicleDataLeasingCalculation?  = nil, matrixRuleId: String? = nil, modifiedOn: Date? = nil, onlineProcessId: String? = nil, payment: CommunicationModelsEnumsTypeOfPayment?  = nil, prepayedAmount: Double?  = nil, price: Double?  = nil, reason: CommunicationModelsEnumsRejectionReason?  = nil, rimId: String? = nil, rrpTotal: Double?  = nil, upholsteryId: String? = nil, usedInTestDrive: Bool?  = nil, vehicle: VehicleDataVehicleInfo?  = nil, vehicleBookingId: String? = nil, vehicleId: String? = nil) {
+  public init(aboCalculation: VehicleDataAboPackageInfo?  = nil, aboRate: Double?  = nil, accessories: [LeadVehicleAccessoryInfo]?  = nil, applicationType: CommunicationModelsEnumsApplicationType?  = nil, balloon: Double?  = nil, calculations: [LeadVehicleCalculationInfo]?  = nil, colourId: String? = nil, comment: String?  = nil, createdOn: Date? = nil, creditPeriod: Double?  = nil, dealerDiscountRuleId: String? = nil, dealerLocationId: String?  = nil, desiredMonthlyRateBrutto: Double?  = nil, desiredMonthlyRateNetto: Double?  = nil, documents: [LeadVehicleDocumentInfo]?  = nil, expectedAnnualMileage: Double?  = nil, fixedExpectedAnnualMileage: Double?  = nil, id: String? = nil, isBusinessCustomer: Bool?  = nil, isInsurancePackageIncluded: Bool?  = nil, isServicePackageIncluded: Bool?  = nil, lead: LeadInfo?  = nil, leadId: String? = nil, leadVehicleType: CommunicationModelsEnumsLeadVehicleType?  = nil, leasingCalculation: VehicleDataLeasingCalculation?  = nil, matrixRuleId: String? = nil, modifiedOn: Date? = nil, onlineProcessId: String? = nil, payment: CommunicationModelsEnumsTypeOfPayment?  = nil, prepayedAmount: Double?  = nil, price: Double?  = nil, reason: CommunicationModelsEnumsRejectionReason?  = nil, rimId: String? = nil, rrpTotal: Double?  = nil, upholsteryId: String? = nil, usedInTestDrive: Bool?  = nil, vehicle: VehicleDataVehicleInfo?  = nil, vehicleBookingId: String? = nil, vehicleId: String? = nil) {
     self.aboCalculation = aboCalculation
     self.aboRate = aboRate
     self.accessories = accessories
@@ -61,6 +63,8 @@ public class FullLeadVehicleData: Codable, Equatable {
     self.creditPeriod = creditPeriod
     self.dealerDiscountRuleId = dealerDiscountRuleId
     self.dealerLocationId = dealerLocationId
+    self.desiredMonthlyRateBrutto = desiredMonthlyRateBrutto
+    self.desiredMonthlyRateNetto = desiredMonthlyRateNetto
     self.documents = documents
     self.expectedAnnualMileage = expectedAnnualMileage
     self.fixedExpectedAnnualMileage = fixedExpectedAnnualMileage
@@ -103,6 +107,8 @@ public class FullLeadVehicleData: Codable, Equatable {
     guard self.creditPeriod == object.creditPeriod else { return false }
     guard self.dealerDiscountRuleId == object.dealerDiscountRuleId else { return false }
     guard self.dealerLocationId == object.dealerLocationId else { return false }
+    guard self.desiredMonthlyRateBrutto == object.desiredMonthlyRateBrutto else { return false }
+    guard self.desiredMonthlyRateNetto == object.desiredMonthlyRateNetto else { return false }
     guard self.documents == object.documents else { return false }
     guard self.expectedAnnualMileage == object.expectedAnnualMileage else { return false }
     guard self.fixedExpectedAnnualMileage == object.fixedExpectedAnnualMileage else { return false }

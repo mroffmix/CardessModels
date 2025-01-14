@@ -14,4 +14,6 @@ public enum CommunicationServiceEnumsExternalEngagementState: Int, Codable, Equa
     case spamReport = 3
     case unsubscribe = 4
     case groupResubscribe = 5
+    case groupUnsubscribe = 6
+    case accountStatusChange = 7
 }

@@ -29,6 +29,8 @@ public class RequestSellData: Codable, Equatable {
   public var creditPeriod: Double?
   public var dateOfBirth: Date?
   public var dealerDiscountRuleId: String?
+  public var desiredMonthlyRateBrutto: Double?
+  public var desiredMonthlyRateNetto: Double?
   public var drivingLicenseIssueDate: Date?
   public var drivingLicenseIssuedBy: String?
   public var drivingLicenseNumber: String?
@@ -54,6 +56,7 @@ public class RequestSellData: Codable, Equatable {
   public var phoneNo: String?
   public var place: String?
   public var postalCode: String?
+  public var preferredActivityId: String?
   public var preferredActivityType: EnumsActivityType?
   public var preferredEndDate: Date?
   public var preferredStartDate: Date?
@@ -78,7 +81,7 @@ public class RequestSellData: Codable, Equatable {
   public var vin: String?
   public var website: String?
 
-  public init(allowEmail: Bool?  = nil, allowMessaging: Bool?  = nil, allowPhone: Bool?  = nil, allowProfiling: Bool?  = nil, allowSms: Bool?  = nil, assignedToId: String? = nil, balloon: Double?  = nil, calculations: [LeadVehicleCalculationInfo]?  = nil, city: String?  = nil, cityId: String? = nil, colourId: String? = nil, comment: String?  = nil, companyName: String?  = nil, contractEndDate: Date? = nil, contractStartDate: Date? = nil, countryId: String? = nil, creditPeriod: Double?  = nil, dateOfBirth: Date? = nil, dealerDiscountRuleId: String? = nil, drivingLicenseIssueDate: Date? = nil, drivingLicenseIssuedBy: String?  = nil, drivingLicenseNumber: String?  = nil, email: String?  = nil, expectedAnnualMileage: Double?  = nil, fingerPrint: String?  = nil, firstName: String?  = nil, id: String? = nil, idIssuedByCity: String?  = nil, idIssuedByCityId: String? = nil, idNumber: String?  = nil, initialRequest: CommunicationModelsEnumsInitialRequest?  = nil, isBusinessCustomer: Bool?  = nil, isInsurancePackageIncluded: Bool?  = nil, isServicePackageIncluded: Bool?  = nil, lastName: String?  = nil, leadType: EnumsLeadType?  = nil, locationId: String?  = nil, mainLocationId: String?  = nil, montlyPaymentAmount: Double?  = nil, onlineProcessId: String? = nil, payment: CommunicationModelsEnumsTypeOfPayment?  = nil, phoneNo: String?  = nil, place: String?  = nil, postalCode: String?  = nil, preferredActivityType: EnumsActivityType?  = nil, preferredEndDate: Date? = nil, preferredStartDate: Date? = nil, prepayedAmount: Double?  = nil, prepayedPercent: Double?  = nil, price: Double?  = nil, requestType: EnumsRequestContactType?  = nil, rimId: String? = nil, ruleId: String? = nil, salutation: String?  = nil, selectedDealerId: String?  = nil, source: CustomerDataEnumsLeadSource?  = nil, street: String?  = nil, tags: [MasterDataTagInfo]?  = nil, tagsText: String?  = nil, title: String?  = nil, tradeInCaseId: String?  = nil, upholsteryId: String? = nil, utmTags: String?  = nil, vehicleId: String? = nil, vehicleInternalNumber: String?  = nil, vin: String?  = nil, website: String?  = nil) {
+  public init(allowEmail: Bool?  = nil, allowMessaging: Bool?  = nil, allowPhone: Bool?  = nil, allowProfiling: Bool?  = nil, allowSms: Bool?  = nil, assignedToId: String? = nil, balloon: Double?  = nil, calculations: [LeadVehicleCalculationInfo]?  = nil, city: String?  = nil, cityId: String? = nil, colourId: String? = nil, comment: String?  = nil, companyName: String?  = nil, contractEndDate: Date? = nil, contractStartDate: Date? = nil, countryId: String? = nil, creditPeriod: Double?  = nil, dateOfBirth: Date? = nil, dealerDiscountRuleId: String? = nil, desiredMonthlyRateBrutto: Double?  = nil, desiredMonthlyRateNetto: Double?  = nil, drivingLicenseIssueDate: Date? = nil, drivingLicenseIssuedBy: String?  = nil, drivingLicenseNumber: String?  = nil, email: String?  = nil, expectedAnnualMileage: Double?  = nil, fingerPrint: String?  = nil, firstName: String?  = nil, id: String? = nil, idIssuedByCity: String?  = nil, idIssuedByCityId: String? = nil, idNumber: String?  = nil, initialRequest: CommunicationModelsEnumsInitialRequest?  = nil, isBusinessCustomer: Bool?  = nil, isInsurancePackageIncluded: Bool?  = nil, isServicePackageIncluded: Bool?  = nil, lastName: String?  = nil, leadType: EnumsLeadType?  = nil, locationId: String?  = nil, mainLocationId: String?  = nil, montlyPaymentAmount: Double?  = nil, onlineProcessId: String? = nil, payment: CommunicationModelsEnumsTypeOfPayment?  = nil, phoneNo: String?  = nil, place: String?  = nil, postalCode: String?  = nil, preferredActivityId: String? = nil, preferredActivityType: EnumsActivityType?  = nil, preferredEndDate: Date? = nil, preferredStartDate: Date? = nil, prepayedAmount: Double?  = nil, prepayedPercent: Double?  = nil, price: Double?  = nil, requestType: EnumsRequestContactType?  = nil, rimId: String? = nil, ruleId: String? = nil, salutation: String?  = nil, selectedDealerId: String?  = nil, source: CustomerDataEnumsLeadSource?  = nil, street: String?  = nil, tags: [MasterDataTagInfo]?  = nil, tagsText: String?  = nil, title: String?  = nil, tradeInCaseId: String?  = nil, upholsteryId: String? = nil, utmTags: String?  = nil, vehicleId: String? = nil, vehicleInternalNumber: String?  = nil, vin: String?  = nil, website: String?  = nil) {
     self.allowEmail = allowEmail
     self.allowMessaging = allowMessaging
     self.allowPhone = allowPhone
@@ -98,6 +101,8 @@ public class RequestSellData: Codable, Equatable {
     self.creditPeriod = creditPeriod
     self.dateOfBirth = dateOfBirth
     self.dealerDiscountRuleId = dealerDiscountRuleId
+    self.desiredMonthlyRateBrutto = desiredMonthlyRateBrutto
+    self.desiredMonthlyRateNetto = desiredMonthlyRateNetto
     self.drivingLicenseIssueDate = drivingLicenseIssueDate
     self.drivingLicenseIssuedBy = drivingLicenseIssuedBy
     self.drivingLicenseNumber = drivingLicenseNumber
@@ -123,6 +128,7 @@ public class RequestSellData: Codable, Equatable {
     self.phoneNo = phoneNo
     self.place = place
     self.postalCode = postalCode
+    self.preferredActivityId = preferredActivityId
     self.preferredActivityType = preferredActivityType
     self.preferredEndDate = preferredEndDate
     self.preferredStartDate = preferredStartDate
@@ -170,6 +176,8 @@ public class RequestSellData: Codable, Equatable {
     guard self.creditPeriod == object.creditPeriod else { return false }
     guard self.dateOfBirth == object.dateOfBirth else { return false }
     guard self.dealerDiscountRuleId == object.dealerDiscountRuleId else { return false }
+    guard self.desiredMonthlyRateBrutto == object.desiredMonthlyRateBrutto else { return false }
+    guard self.desiredMonthlyRateNetto == object.desiredMonthlyRateNetto else { return false }
     guard self.drivingLicenseIssueDate == object.drivingLicenseIssueDate else { return false }
     guard self.drivingLicenseIssuedBy == object.drivingLicenseIssuedBy else { return false }
     guard self.drivingLicenseNumber == object.drivingLicenseNumber else { return false }
@@ -195,6 +203,7 @@ public class RequestSellData: Codable, Equatable {
     guard self.phoneNo == object.phoneNo else { return false }
     guard self.place == object.place else { return false }
     guard self.postalCode == object.postalCode else { return false }
+    guard self.preferredActivityId == object.preferredActivityId else { return false }
     guard self.preferredActivityType == object.preferredActivityType else { return false }
     guard self.preferredEndDate == object.preferredEndDate else { return false }
     guard self.preferredStartDate == object.preferredStartDate else { return false }

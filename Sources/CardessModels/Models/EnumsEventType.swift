@@ -29,4 +29,6 @@ public enum EnumsEventType: Int, Codable, Equatable, CaseIterable {
     case appointmentConfirmation = 18
     case appointmentRequested = 19
     case serviceAppointmentConfirmation = 20
+    case testDriveBooking = 21
+    case salesLeadTransferToRetailer = 22
 }

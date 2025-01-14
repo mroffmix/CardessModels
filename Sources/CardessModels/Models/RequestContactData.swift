@@ -41,6 +41,7 @@ public class RequestContactData: Codable, Equatable {
   public var phoneNo: String?
   public var place: String?
   public var postalCode: String?
+  public var preferredActivityId: String?
   public var preferredActivityType: EnumsActivityType?
   public var preferredEndDate: Date?
   public var preferredStartDate: Date?
@@ -59,7 +60,7 @@ public class RequestContactData: Codable, Equatable {
   public var vin: String?
   public var website: String?
 
-  public init(allowEmail: Bool?  = nil, allowMessaging: Bool?  = nil, allowPhone: Bool?  = nil, allowProfiling: Bool?  = nil, allowSms: Bool?  = nil, assignedToId: String? = nil, city: String?  = nil, cityId: String? = nil, comment: String?  = nil, companyName: String?  = nil, countryId: String? = nil, dateOfBirth: Date? = nil, drivingLicenseIssueDate: Date? = nil, drivingLicenseIssuedBy: String?  = nil, drivingLicenseNumber: String?  = nil, email: String?  = nil, fingerPrint: String?  = nil, firstName: String?  = nil, id: String? = nil, idIssuedByCity: String?  = nil, idIssuedByCityId: String? = nil, idNumber: String?  = nil, initialRequest: CommunicationModelsEnumsInitialRequest?  = nil, lastName: String?  = nil, leadType: EnumsLeadType?  = nil, locationId: String?  = nil, mainLocationId: String?  = nil, onlineProcessId: String? = nil, phoneNo: String?  = nil, place: String?  = nil, postalCode: String?  = nil, preferredActivityType: EnumsActivityType?  = nil, preferredEndDate: Date? = nil, preferredStartDate: Date? = nil, price: Double?  = nil, requestType: EnumsRequestContactType?  = nil, salutation: String?  = nil, source: CustomerDataEnumsLeadSource?  = nil, street: String?  = nil, tags: [MasterDataTagInfo]?  = nil, tagsText: String?  = nil, title: String?  = nil, tradeInCaseId: String?  = nil, utmTags: String?  = nil, vehicleId: String? = nil, vehicleInternalNumber: String?  = nil, vin: String?  = nil, website: String?  = nil) {
+  public init(allowEmail: Bool?  = nil, allowMessaging: Bool?  = nil, allowPhone: Bool?  = nil, allowProfiling: Bool?  = nil, allowSms: Bool?  = nil, assignedToId: String? = nil, city: String?  = nil, cityId: String? = nil, comment: String?  = nil, companyName: String?  = nil, countryId: String? = nil, dateOfBirth: Date? = nil, drivingLicenseIssueDate: Date? = nil, drivingLicenseIssuedBy: String?  = nil, drivingLicenseNumber: String?  = nil, email: String?  = nil, fingerPrint: String?  = nil, firstName: String?  = nil, id: String? = nil, idIssuedByCity: String?  = nil, idIssuedByCityId: String? = nil, idNumber: String?  = nil, initialRequest: CommunicationModelsEnumsInitialRequest?  = nil, lastName: String?  = nil, leadType: EnumsLeadType?  = nil, locationId: String?  = nil, mainLocationId: String?  = nil, onlineProcessId: String? = nil, phoneNo: String?  = nil, place: String?  = nil, postalCode: String?  = nil, preferredActivityId: String? = nil, preferredActivityType: EnumsActivityType?  = nil, preferredEndDate: Date? = nil, preferredStartDate: Date? = nil, price: Double?  = nil, requestType: EnumsRequestContactType?  = nil, salutation: String?  = nil, source: CustomerDataEnumsLeadSource?  = nil, street: String?  = nil, tags: [MasterDataTagInfo]?  = nil, tagsText: String?  = nil, title: String?  = nil, tradeInCaseId: String?  = nil, utmTags: String?  = nil, vehicleId: String? = nil, vehicleInternalNumber: String?  = nil, vin: String?  = nil, website: String?  = nil) {
     self.allowEmail = allowEmail
     self.allowMessaging = allowMessaging
     self.allowPhone = allowPhone
@@ -91,6 +92,7 @@ public class RequestContactData: Codable, Equatable {
     self.phoneNo = phoneNo
     self.place = place
     self.postalCode = postalCode
+    self.preferredActivityId = preferredActivityId
     self.preferredActivityType = preferredActivityType
     self.preferredEndDate = preferredEndDate
     self.preferredStartDate = preferredStartDate
@@ -144,6 +146,7 @@ public class RequestContactData: Codable, Equatable {
     guard self.phoneNo == object.phoneNo else { return false }
     guard self.place == object.place else { return false }
     guard self.postalCode == object.postalCode else { return false }
+    guard self.preferredActivityId == object.preferredActivityId else { return false }
     guard self.preferredActivityType == object.preferredActivityType else { return false }
     guard self.preferredEndDate == object.preferredEndDate else { return false }
     guard self.preferredStartDate == object.preferredStartDate else { return false }

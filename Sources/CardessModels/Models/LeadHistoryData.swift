@@ -11,10 +11,12 @@ import Foundation
 
 public class LeadHistoryData: Codable, Equatable {
   public var events: [LeadEventInfo]?
+  public var leadId: String?
   public var tags: [MasterDataTagInfo]?
 
-  public init(events: [LeadEventInfo]?  = nil, tags: [MasterDataTagInfo]?  = nil) {
+  public init(events: [LeadEventInfo]?  = nil, leadId: String? = nil, tags: [MasterDataTagInfo]?  = nil) {
     self.events = events
+    self.leadId = leadId
     self.tags = tags
   }
 
@@ -22,6 +24,7 @@ public class LeadHistoryData: Codable, Equatable {
   public func isEqual(to object: Any?) -> Bool {
     guard let object = object as? LeadHistoryData else { return false }
     guard self.events == object.events else { return false }
+    guard self.leadId == object.leadId else { return false }
     guard self.tags == object.tags else { return false }
     return true
   }

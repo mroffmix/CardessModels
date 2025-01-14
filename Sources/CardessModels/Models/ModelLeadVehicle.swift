@@ -21,6 +21,8 @@ public class ModelLeadVehicle: Codable, Equatable {
   public var creditPeriod: Double?
   public var dealerDiscountRuleId: String?
   public var dealerLocationId: String?
+  public var desiredMonthlyRateBrutto: Double?
+  public var desiredMonthlyRateNetto: Double?
   public var documents: [ModelLeadVehicleDocument]?
   public var expectedAnnualMileage: Double?
   public var expirationDate: Date?
@@ -45,7 +47,7 @@ public class ModelLeadVehicle: Codable, Equatable {
   public var vehicleBookingId: String?
   public var vehicleId: String?
 
-  public init(aboRate: Double?  = nil, accessories: [ModelLeadVehicleAccessory]?  = nil, applicationType: CommunicationModelsEnumsApplicationType?  = nil, balloon: Double?  = nil, calculations: [ModelLeadVehicleCalculation]?  = nil, colourId: String? = nil, comment: String?  = nil, createdOn: Date? = nil, creditPeriod: Double?  = nil, dealerDiscountRuleId: String? = nil, dealerLocationId: String?  = nil, documents: [ModelLeadVehicleDocument]?  = nil, expectedAnnualMileage: Double?  = nil, expirationDate: Date? = nil, id: String? = nil, isBusinessCustomer: Bool?  = nil, isInsurancePackageIncluded: Bool?  = nil, isServicePackageIncluded: Bool?  = nil, lead: ModelLead?  = nil, leadId: String? = nil, leadVehicleType: CommunicationModelsEnumsLeadVehicleType?  = nil, matrixRuleId: String? = nil, modifiedOn: Date? = nil, onlineProcessId: String? = nil, orderProvidedAt: Date? = nil, payment: CommunicationModelsEnumsTypeOfPayment?  = nil, prepayedAmount: Double?  = nil, price: Double?  = nil, reason: CommunicationModelsEnumsRejectionReason?  = nil, rimId: String? = nil, upholsteryId: String? = nil, usedInTestDrive: Bool?  = nil, vehicleBookingId: String? = nil, vehicleId: String? = nil) {
+  public init(aboRate: Double?  = nil, accessories: [ModelLeadVehicleAccessory]?  = nil, applicationType: CommunicationModelsEnumsApplicationType?  = nil, balloon: Double?  = nil, calculations: [ModelLeadVehicleCalculation]?  = nil, colourId: String? = nil, comment: String?  = nil, createdOn: Date? = nil, creditPeriod: Double?  = nil, dealerDiscountRuleId: String? = nil, dealerLocationId: String?  = nil, desiredMonthlyRateBrutto: Double?  = nil, desiredMonthlyRateNetto: Double?  = nil, documents: [ModelLeadVehicleDocument]?  = nil, expectedAnnualMileage: Double?  = nil, expirationDate: Date? = nil, id: String? = nil, isBusinessCustomer: Bool?  = nil, isInsurancePackageIncluded: Bool?  = nil, isServicePackageIncluded: Bool?  = nil, lead: ModelLead?  = nil, leadId: String? = nil, leadVehicleType: CommunicationModelsEnumsLeadVehicleType?  = nil, matrixRuleId: String? = nil, modifiedOn: Date? = nil, onlineProcessId: String? = nil, orderProvidedAt: Date? = nil, payment: CommunicationModelsEnumsTypeOfPayment?  = nil, prepayedAmount: Double?  = nil, price: Double?  = nil, reason: CommunicationModelsEnumsRejectionReason?  = nil, rimId: String? = nil, upholsteryId: String? = nil, usedInTestDrive: Bool?  = nil, vehicleBookingId: String? = nil, vehicleId: String? = nil) {
     self.aboRate = aboRate
     self.accessories = accessories
     self.applicationType = applicationType
@@ -57,6 +59,8 @@ public class ModelLeadVehicle: Codable, Equatable {
     self.creditPeriod = creditPeriod
     self.dealerDiscountRuleId = dealerDiscountRuleId
     self.dealerLocationId = dealerLocationId
+    self.desiredMonthlyRateBrutto = desiredMonthlyRateBrutto
+    self.desiredMonthlyRateNetto = desiredMonthlyRateNetto
     self.documents = documents
     self.expectedAnnualMileage = expectedAnnualMileage
     self.expirationDate = expirationDate
@@ -96,6 +100,8 @@ public class ModelLeadVehicle: Codable, Equatable {
     guard self.creditPeriod == object.creditPeriod else { return false }
     guard self.dealerDiscountRuleId == object.dealerDiscountRuleId else { return false }
     guard self.dealerLocationId == object.dealerLocationId else { return false }
+    guard self.desiredMonthlyRateBrutto == object.desiredMonthlyRateBrutto else { return false }
+    guard self.desiredMonthlyRateNetto == object.desiredMonthlyRateNetto else { return false }
     guard self.documents == object.documents else { return false }
     guard self.expectedAnnualMileage == object.expectedAnnualMileage else { return false }
     guard self.expirationDate == object.expirationDate else { return false }

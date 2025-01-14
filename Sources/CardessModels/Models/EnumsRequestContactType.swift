@@ -10,4 +10,5 @@ import Foundation
 public enum EnumsRequestContactType: Int, Codable, Equatable, CaseIterable {
     case generic = 0
     case appointment = 1
+    case testDrive = 2
 }

@@ -11,6 +11,6 @@ public enum CommunicationServiceEnumsExternalDeliveryState: Int, Codable, Equata
     case processed = 0
     case dropped = 1
     case deferred = 2
-    case bounced = 3
+    case bounce = 3
     case delivered = 4
 }

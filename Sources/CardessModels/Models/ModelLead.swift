@@ -52,6 +52,7 @@ public class ModelLead: Codable, Equatable {
   public var facebookId: String?
   public var financingType: EnumsFinancingType?
   public var firstName: String?
+  public var fmadeId: Int?
   public var id: String?
   public var idIssuedByCity: String?
   public var idIssuedByCityId: String?
@@ -93,6 +94,9 @@ public class ModelLead: Codable, Equatable {
   public var salutation: String?
   public var searchPhone: String?
   public var searchPhoneSecondary: String?
+  public var sentToRetailBy: String?
+  public var sentToRetailDate: Date?
+  public var sentToRetailId: String?
   public var source: CustomerDataEnumsLeadSource?
   public var state: EnumsLeadStatus?
   public var stockVehiclesOnly: Bool?
@@ -104,7 +108,7 @@ public class ModelLead: Codable, Equatable {
   public var vehicleStatus: VehicleDataEnumsVehicleStatus?
   public var website: String?
 
-  public init(activities: [ModelActivity]?  = nil, allowEmail: Bool?  = nil, allowMessaging: Bool?  = nil, allowPhone: Bool?  = nil, allowProfiling: Bool?  = nil, allowSms: Bool?  = nil, budget: Double?  = nil, campaignId: String? = nil, carState: EnumsCarState?  = nil, ccvId: Int?  = nil, chatMessages: [ModelChatMessage]?  = nil, city: String?  = nil, cityId: String? = nil, closeReason: EnumsLeadCloseReason?  = nil, comment: String?  = nil, communicationState: EnumsEventType?  = nil, companyName: String?  = nil, countryCode: String?  = nil, countryId: String? = nil, createdOn: Date? = nil, crmExternalCustomerID: String?  = nil, currentCar: String?  = nil, currentCarFinanced: Bool?  = nil, currentCarFinancingEndDate: Date? = nil, currentCarRegistrationDate: Date? = nil, currentVehicleLicensePlate: String?  = nil, currentVehicleMake: String?  = nil, currentVehicleMileage: Int?  = nil, currentVehicleModel: String?  = nil, currentVehicleVin: String?  = nil, customerType: Bool?  = nil, dateOfBirth: Date? = nil, drivingLicenseIssueDate: Date? = nil, drivingLicenseIssuedBy: String?  = nil, drivingLicenseNumber: String?  = nil, email: String?  = nil, externalCustomerID: String?  = nil, externalId: String?  = nil, externalUrl: String?  = nil, facebookId: String?  = nil, financingType: EnumsFinancingType?  = nil, firstName: String?  = nil, id: String? = nil, idIssuedByCity: String?  = nil, idIssuedByCityId: String? = nil, idNumber: String?  = nil, importSource: EnumsImportLeadSource?  = nil, initialRequest: CommunicationModelsEnumsInitialRequest?  = nil, languageCode: String?  = nil, lastName: String?  = nil, leadMainTriggerType: EnumsEngageTriggerType?  = nil, leadObjections: [ModelLeadObjection]?  = nil, leadServices: [ModelLeadService]?  = nil, leadTags: [ModelLeadTag]?  = nil, leadType: EnumsLeadType?  = nil, leadVehicles: [ModelLeadVehicle]?  = nil, leasePeriod: Int?  = nil, locationId: String?  = nil, mileageTo: Int?  = nil, mileageYearly: Int?  = nil, modifiedOn: Date? = nil, montlyPaymentAmount: Double?  = nil, objections: String?  = nil, personalDetails: [ModelLeadPersonalDetails]?  = nil, personalDetailsDocuments: [ModelLeadPersonalDetailsDocument]?  = nil, personalizedMessage: String?  = nil, phoneCarrierType: EnumsCarrierType?  = nil, phoneNo: String?  = nil, phoneNoSecondary: String?  = nil, pipelinePhase: CommunicationModelsEnumsLeadPipelinePhase?  = nil, pipelinePhaseStartDate: Date? = nil, postalCode: String?  = nil, prepaymentAmount: Double?  = nil, productionYearFrom: Int?  = nil, purchaseTimeframeQuarter: Int?  = nil, purchaseTimeframeYear: Int?  = nil, raiting: Int?  = nil, remoteConsultingId: String?  = nil, responsiblePerson: ModelUser?  = nil, responsiblePersonId: String? = nil, salutation: String?  = nil, searchPhone: String?  = nil, searchPhoneSecondary: String?  = nil, source: CustomerDataEnumsLeadSource?  = nil, state: EnumsLeadStatus?  = nil, stockVehiclesOnly: Bool?  = nil, street: String?  = nil, title: String?  = nil, tradeInCaseId: String?  = nil, tradeInRequested: Bool?  = nil, utmTags: String?  = nil, vehicleStatus: VehicleDataEnumsVehicleStatus?  = nil, website: String?  = nil) {
+  public init(activities: [ModelActivity]?  = nil, allowEmail: Bool?  = nil, allowMessaging: Bool?  = nil, allowPhone: Bool?  = nil, allowProfiling: Bool?  = nil, allowSms: Bool?  = nil, budget: Double?  = nil, campaignId: String? = nil, carState: EnumsCarState?  = nil, ccvId: Int?  = nil, chatMessages: [ModelChatMessage]?  = nil, city: String?  = nil, cityId: String? = nil, closeReason: EnumsLeadCloseReason?  = nil, comment: String?  = nil, communicationState: EnumsEventType?  = nil, companyName: String?  = nil, countryCode: String?  = nil, countryId: String? = nil, createdOn: Date? = nil, crmExternalCustomerID: String?  = nil, currentCar: String?  = nil, currentCarFinanced: Bool?  = nil, currentCarFinancingEndDate: Date? = nil, currentCarRegistrationDate: Date? = nil, currentVehicleLicensePlate: String?  = nil, currentVehicleMake: String?  = nil, currentVehicleMileage: Int?  = nil, currentVehicleModel: String?  = nil, currentVehicleVin: String?  = nil, customerType: Bool?  = nil, dateOfBirth: Date? = nil, drivingLicenseIssueDate: Date? = nil, drivingLicenseIssuedBy: String?  = nil, drivingLicenseNumber: String?  = nil, email: String?  = nil, externalCustomerID: String?  = nil, externalId: String?  = nil, externalUrl: String?  = nil, facebookId: String?  = nil, financingType: EnumsFinancingType?  = nil, firstName: String?  = nil, fmadeId: Int?  = nil, id: String? = nil, idIssuedByCity: String?  = nil, idIssuedByCityId: String? = nil, idNumber: String?  = nil, importSource: EnumsImportLeadSource?  = nil, initialRequest: CommunicationModelsEnumsInitialRequest?  = nil, languageCode: String?  = nil, lastName: String?  = nil, leadMainTriggerType: EnumsEngageTriggerType?  = nil, leadObjections: [ModelLeadObjection]?  = nil, leadServices: [ModelLeadService]?  = nil, leadTags: [ModelLeadTag]?  = nil, leadType: EnumsLeadType?  = nil, leadVehicles: [ModelLeadVehicle]?  = nil, leasePeriod: Int?  = nil, locationId: String?  = nil, mileageTo: Int?  = nil, mileageYearly: Int?  = nil, modifiedOn: Date? = nil, montlyPaymentAmount: Double?  = nil, objections: String?  = nil, personalDetails: [ModelLeadPersonalDetails]?  = nil, personalDetailsDocuments: [ModelLeadPersonalDetailsDocument]?  = nil, personalizedMessage: String?  = nil, phoneCarrierType: EnumsCarrierType?  = nil, phoneNo: String?  = nil, phoneNoSecondary: String?  = nil, pipelinePhase: CommunicationModelsEnumsLeadPipelinePhase?  = nil, pipelinePhaseStartDate: Date? = nil, postalCode: String?  = nil, prepaymentAmount: Double?  = nil, productionYearFrom: Int?  = nil, purchaseTimeframeQuarter: Int?  = nil, purchaseTimeframeYear: Int?  = nil, raiting: Int?  = nil, remoteConsultingId: String?  = nil, responsiblePerson: ModelUser?  = nil, responsiblePersonId: String? = nil, salutation: String?  = nil, searchPhone: String?  = nil, searchPhoneSecondary: String?  = nil, sentToRetailBy: String? = nil, sentToRetailDate: Date? = nil, sentToRetailId: String?  = nil, source: CustomerDataEnumsLeadSource?  = nil, state: EnumsLeadStatus?  = nil, stockVehiclesOnly: Bool?  = nil, street: String?  = nil, title: String?  = nil, tradeInCaseId: String?  = nil, tradeInRequested: Bool?  = nil, utmTags: String?  = nil, vehicleStatus: VehicleDataEnumsVehicleStatus?  = nil, website: String?  = nil) {
     self.activities = activities
     self.allowEmail = allowEmail
     self.allowMessaging = allowMessaging
@@ -147,6 +151,7 @@ public class ModelLead: Codable, Equatable {
     self.facebookId = facebookId
     self.financingType = financingType
     self.firstName = firstName
+    self.fmadeId = fmadeId
     self.id = id
     self.idIssuedByCity = idIssuedByCity
     self.idIssuedByCityId = idIssuedByCityId
@@ -188,6 +193,9 @@ public class ModelLead: Codable, Equatable {
     self.salutation = salutation
     self.searchPhone = searchPhone
     self.searchPhoneSecondary = searchPhoneSecondary
+    self.sentToRetailBy = sentToRetailBy
+    self.sentToRetailDate = sentToRetailDate
+    self.sentToRetailId = sentToRetailId
     self.source = source
     self.state = state
     self.stockVehiclesOnly = stockVehiclesOnly
@@ -245,6 +253,7 @@ public class ModelLead: Codable, Equatable {
     guard self.facebookId == object.facebookId else { return false }
     guard self.financingType == object.financingType else { return false }
     guard self.firstName == object.firstName else { return false }
+    guard self.fmadeId == object.fmadeId else { return false }
     guard self.id == object.id else { return false }
     guard self.idIssuedByCity == object.idIssuedByCity else { return false }
     guard self.idIssuedByCityId == object.idIssuedByCityId else { return false }
@@ -286,6 +295,9 @@ public class ModelLead: Codable, Equatable {
     guard self.salutation == object.salutation else { return false }
     guard self.searchPhone == object.searchPhone else { return false }
     guard self.searchPhoneSecondary == object.searchPhoneSecondary else { return false }
+    guard self.sentToRetailBy == object.sentToRetailBy else { return false }
+    guard self.sentToRetailDate == object.sentToRetailDate else { return false }
+    guard self.sentToRetailId == object.sentToRetailId else { return false }
     guard self.source == object.source else { return false }
     guard self.state == object.state else { return false }
     guard self.stockVehiclesOnly == object.stockVehiclesOnly else { return false }

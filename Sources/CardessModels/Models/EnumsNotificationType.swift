@@ -14,4 +14,5 @@ public enum EnumsNotificationType: Int, Codable, Equatable, CaseIterable {
     case appointmentRequest = 3
     case firstPlpVisit = 4
     case newMessageSession = 5
+    case newIncomingEmail = 6
 }

@@ -21,6 +21,7 @@ public class ApplicationSettings: Codable, Equatable {
   public var defaultLocationEmail: String?
   public var defaultState: String?
   public var endWorkingHour: Int?
+  public var isFmadeClientConfigured: Bool?
   public var isWhatsAppEnabled: Bool?
   public var locationId: String?
   public var planAppointmentSettings: PlanAppointmentSettingsInfo?
@@ -32,7 +33,7 @@ public class ApplicationSettings: Codable, Equatable {
   public var twilioOutgoingEnabled: Bool?
   public var twilioPushUrl: String?
 
-  public init(asmGroupId: String?  = nil, cardessServiceUrl: String?  = nil, categories: [MasterDataEquipmentCategoryInfo]?  = nil, customerPortalUrl: String?  = nil, dateFormat: String?  = nil, defaultCountry: MasterDataCountryInfo?  = nil, defaultCurrencyCode: String?  = nil, defaultLanguageCode: String?  = nil, defaultLocationEmail: String?  = nil, defaultState: String?  = nil, endWorkingHour: Int?  = nil, isWhatsAppEnabled: Bool?  = nil, locationId: String?  = nil, planAppointmentSettings: PlanAppointmentSettingsInfo?  = nil, showVehiclesForTheLocationOnly: Bool?  = nil, startWorkingHour: Int?  = nil, timeFormat: String?  = nil, timeZoneOffset: String? = nil, tradeinEnabled: Bool?  = nil, twilioOutgoingEnabled: Bool?  = nil, twilioPushUrl: String?  = nil) {
+  public init(asmGroupId: String?  = nil, cardessServiceUrl: String?  = nil, categories: [MasterDataEquipmentCategoryInfo]?  = nil, customerPortalUrl: String?  = nil, dateFormat: String?  = nil, defaultCountry: MasterDataCountryInfo?  = nil, defaultCurrencyCode: String?  = nil, defaultLanguageCode: String?  = nil, defaultLocationEmail: String?  = nil, defaultState: String?  = nil, endWorkingHour: Int?  = nil, isFmadeClientConfigured: Bool?  = nil, isWhatsAppEnabled: Bool?  = nil, locationId: String?  = nil, planAppointmentSettings: PlanAppointmentSettingsInfo?  = nil, showVehiclesForTheLocationOnly: Bool?  = nil, startWorkingHour: Int?  = nil, timeFormat: String?  = nil, timeZoneOffset: String? = nil, tradeinEnabled: Bool?  = nil, twilioOutgoingEnabled: Bool?  = nil, twilioPushUrl: String?  = nil) {
     self.asmGroupId = asmGroupId
     self.cardessServiceUrl = cardessServiceUrl
     self.categories = categories
@@ -44,6 +45,7 @@ public class ApplicationSettings: Codable, Equatable {
     self.defaultLocationEmail = defaultLocationEmail
     self.defaultState = defaultState
     self.endWorkingHour = endWorkingHour
+    self.isFmadeClientConfigured = isFmadeClientConfigured
     self.isWhatsAppEnabled = isWhatsAppEnabled
     self.locationId = locationId
     self.planAppointmentSettings = planAppointmentSettings
@@ -70,6 +72,7 @@ public class ApplicationSettings: Codable, Equatable {
     guard self.defaultLocationEmail == object.defaultLocationEmail else { return false }
     guard self.defaultState == object.defaultState else { return false }
     guard self.endWorkingHour == object.endWorkingHour else { return false }
+    guard self.isFmadeClientConfigured == object.isFmadeClientConfigured else { return false }
     guard self.isWhatsAppEnabled == object.isWhatsAppEnabled else { return false }
     guard self.locationId == object.locationId else { return false }
     guard self.planAppointmentSettings == object.planAppointmentSettings else { return false }

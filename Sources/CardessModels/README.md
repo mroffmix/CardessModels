@@ -166,6 +166,7 @@ To add support for a specific asynchronous library, just add an extension on `AP
 - **CallRedirectSettingsInfo**
 - **CarCheckNotificationInfo**
 - **ChatMessageView**
+- **CommunicationChangePasswordData**
 - **CommunicationEventMapping**
 - **CommunicationEventMappingType**
 - **CommunicationImportImportBulkResponse**
@@ -191,6 +192,7 @@ To add support for a specific asynchronous library, just add an extension on `AP
 - **CommunicationRemoteConsultingRemoteServiceCase**
 - **CommunicationRemoteConsultingRemoteServiceCaseState**
 - **CommunicationRemoteConsultingVehicleOverview**
+- **CommunicationResetPasswordData**
 - **CommunicationServiceEntity**
 - **CommunicationServiceEnumsEventSenderType**
 - **CommunicationServiceEnumsExternalDeliveryState**
@@ -441,6 +443,8 @@ To add support for a specific asynchronous library, just add an extension on `AP
 - **ProcessSettings**
 - **ProductInfo**
 - **PushData**
+- **ReassignRequest**
+- **ReassignResponse**
 - **RedirectData**
 - **RegisterToEventData**
 - **ReportData**
@@ -585,7 +589,10 @@ To add support for a specific asynchronous library, just add an extension on `AP
 	- **GetApiAuthFacebookCode**: GET `/api/auth/facebook-code`
 	- **PostApiAuth**: POST `/api/auth`
 	- **PostApiAuthRefreshToken**: POST `/api/auth/refreshtoken`
+	- **PostApiAuthChangePasswordByToken**: POST `/api/auth/changepassword/{token}`
+	- **PostApiAuthResetPassword**: POST `/api/auth/resetpassword`
 - **API.Avatar**
+	- **GetApiAvatarHistoryByDates**: GET `/api/avatar/historybydates`
 	- **GetApiAvatarById**: GET `/api/avatar/{id}`
 	- **GetApiAvatarByIdEvents**: GET `/api/avatar/{id}/events`
 	- **GetApiAvatarByIdTags**: GET `/api/avatar/{id}/tags`
@@ -705,6 +712,7 @@ To add support for a specific asynchronous library, just add an extension on `AP
 - **API.Lead**
 	- **DeleteApiLeadDocumentByDocId**: DELETE `/api/lead/document/{docid}`
 	- **DeleteApiLeadServiceByServiceId**: DELETE `/api/lead/service/{serviceid}`
+	- **DeleteApiLeadTestdrivedocumentByDocIdByDocName**: DELETE `/api/lead/testdrivedocument/{docid}/{docname}`
 	- **DeleteApiLeadByLeadId**: DELETE `/api/lead/{leadid}`
 	- **GetApiLead**: GET `/api/lead`
 	- **GetApiLeadCities**: GET `/api/lead/cities`
@@ -718,8 +726,10 @@ To add support for a specific asynchronous library, just add an extension on `AP
 	- **PatchApiLeadCloseById**: PATCH `/api/lead/close/{id}`
 	- **PostApiLead**: POST `/api/lead`
 	- **PostApiLeadCheckfirstvisitByLeadIdByFingerprint**: POST `/api/lead/checkfirstvisit/{leadid}/{fingerprint}`
+	- **PostApiLeadFmadeSaveleadByLeadId**: POST `/api/lead/fmade/savelead/{leadid}`
 	- **PostApiLeadPersonaldetails**: POST `/api/lead/personaldetails`
 	- **PostApiLeadPersonaldetailsDocumentByPersonalDetailsIdOrLeadIdByName**: POST `/api/lead/personaldetails/document/{personaldetailsidorleadid}/{name}`
+	- **PostApiLeadSendtoretailByLeadIdByRetailLocationId**: POST `/api/lead/sendtoretail/{leadid}/{retaillocationid}`
 	- **PostApiLeadSetPipelinePhaseByKey**: POST `/api/lead/setpipelinephase/{key}`
 	- **PostApiLeadWithlastactivity**: POST `/api/lead/withlastactivity`
 	- **PutApiLeadPersonaldetailsById**: PUT `/api/lead/personaldetails/{id}`
@@ -978,6 +988,7 @@ To add support for a specific asynchronous library, just add an extension on `AP
 	- **GetApiUserDataById**: GET `/api/userdata/{id}`
 	- **PatchApiUserDataMeLocaleByLocale**: PATCH `/api/userdata/me/locale/{locale}`
 	- **PostApiUserData**: POST `/api/userdata`
+	- **PostApiUserDataReassign**: POST `/api/userdata/reassign`
 	- **PostApiUserDataSync**: POST `/api/userdata/sync`
 	- **PutApiUserDataById**: PUT `/api/userdata/{id}`
 - **API.Vehicle**
